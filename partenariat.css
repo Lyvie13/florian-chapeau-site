@@ -1,0 +1,815 @@
+/*----- ACCUEIL CSS----*/
+
+
+/* ---- header ---- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    background: #0F274D;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+    width: 58%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at 60% 49%,
+        rgba(34, 61, 108, 0) 14%,
+        rgba(53, 76, 116, 0.73) 30%,
+        rgba(7, 23, 50, 1) 40%,
+        rgba(7, 23, 50, 1) 57%
+    );
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 1400px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 40px 0;
+}
+
+.hero-left {
+    width: 42%;
+    color: white;    
+}
+
+.hero-left h1 {
+    font-size: 70px;
+    color: #ffffff;
+}
+
+.subtitle {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 30px 0 90px 0;
+    color: #ffffff;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+.buttons button {
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    border: 2px solid #D7BA63;
+    padding: 14px 26px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background: #D7BA63;
+    color: #0F274D;
+
+}
+
+
+/*=======================
+pourquoi soutenir
+=========================*/
+
+.support-section {
+  width: 100%;
+  background: #fff;
+  padding: 30px 28px 50px;
+}
+
+.support-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.support-title h2 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #050505;
+}
+
+
+.stats-grid{
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+}
+.stat{
+    position:relative;
+    margin-top: 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+
+    padding:0 15px;
+}
+
+
+/* Icônes */
+
+.stat img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+    margin-bottom:18px;
+}
+
+/* titres */
+
+.stat h3{
+    margin:0 0 10px;
+
+    color:#000000;
+
+    font-size:1.36rem;
+    font-weight:650;
+    line-height:1;
+}
+
+/* Descriptions */
+
+.stat p{
+    font-size: 0.9rem;
+    max-width: 280px;
+
+    margin: 0;
+
+    color: #000;
+    font-weight: 400;
+    line-height: 1.35;
+
+    max-width: 260px;
+}
+
+/*--- gold line ---*/
+
+.gold-line {
+    
+    width:250px;
+    height:3px;
+    background:#c8b46e;
+    margin-bottom: 30px;
+    
+    
+}
+
+.gold-line2 {
+    
+    width:250px;
+    height:3px;
+    background:#c8b46e;
+    margin:0 auto 40px;
+    
+    
+}
+
+
+/* ==================================
+   OFFRES DE PARTENARIAT
+================================== */
+
+.offers-section{
+    width:100%;
+    background:#fff;
+    padding:50px 28px 70px;
+}
+
+.offers-container{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:minmax(0, 2.15fr) minmax(300px, 1fr);
+    gap:18px;
+    align-items:start;
+}
+
+/* Titres */
+
+.offers-partnership > h2,
+.patron-card > h2{
+    margin:0 0 18px;
+
+    font-family:"Poppins", sans-serif;
+    font-size:1.8rem;
+    font-weight:800;
+    line-height:1.1;
+    color:#080808;
+}
+
+.offers-partnership > h2 span,
+.patron-card > h2 span{
+    color:#c8b46e;
+}
+
+/* Tableau */
+
+.offers-table-wrapper{
+    width:100%;
+    overflow-x:auto;
+
+    border:2px solid #c8b46e;
+    border-radius:7px;
+}
+
+.offers-table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+
+    font-family:"Poppins", sans-serif;
+    table-layout:fixed;
+}
+
+.offers-table th,
+.offers-table td{
+    border-right:2px solid #fff;
+    border-bottom:2px solid #fff;
+}
+
+.offers-table th:last-child,
+.offers-table td:last-child{
+    border-right:none;
+}
+
+.offers-table tbody tr:last-child td{
+    border-bottom:none;
+}
+
+/* En-têtes */
+
+.offers-table thead th:first-child{
+    width:29%;
+    background:#fff;
+}
+
+.offer-head{
+    height:105px;
+    padding:12px 6px;
+
+    color:#fff;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.offer-head strong{
+    display:block;
+
+    font-size:.92rem;
+    font-weight:800;
+}
+
+.offer-head span{
+    display:block;
+    margin-top:9px;
+
+    font-size:.64rem;
+    font-weight:400;
+    line-height:1.35;
+}
+
+.offer-head--bronze{
+    background:#b97600;
+}
+
+.offer-head--silver{
+    background:#b8b8b8;
+}
+
+.offer-head--gold{
+    background:#efc320;
+}
+
+.offer-head--premium{
+    background:#102b4c;
+}
+
+/* Cellules */
+
+.offers-table tbody td{
+    background:#e9e9e9;
+
+    padding:8px 7px;
+
+    font-size:.7rem;
+    line-height:1.25;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.offers-table tbody td:first-child{
+    background:#f5f5f5;
+    text-align:left;
+}
+
+.offers-table tbody td:not(:first-child){
+    font-size:1.1rem;
+    font-weight:600;
+}
+
+/* Textes longs dans la dernière colonne */
+
+.offers-table tbody td:last-child{
+    font-size:.62rem;
+    font-weight:500;
+}
+
+/* ==================================
+   BLOC MÉCÈNE
+================================== */
+
+.patron-card__content{
+    border:2px solid #c8b46e;
+    border-radius:7px;
+
+    padding:16px 14px 18px;
+}
+
+.patron-intro{
+    margin:0 0 24px;
+
+    font-family:"Poppins", sans-serif;
+    font-size:.76rem;
+    line-height:1.45;
+    color:#111;
+}
+
+.patron-benefits{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:20px 14px;
+    margin-bottom:20px;
+}
+
+.patron-benefit{
+    text-align:center;
+}
+
+.patron-benefit:last-child{
+    grid-column:1 / -1;
+    width:55%;
+    margin:0 auto;
+}
+
+.patron-icon{
+    margin-bottom:8px;
+
+    font-size:2rem;
+    line-height:1;
+}
+
+.patron-benefit p{
+    margin:0;
+
+    font-family:"Poppins", sans-serif;
+    font-size:.62rem;
+    line-height:1.35;
+}
+
+/* Réduction fiscale */
+
+.tax-box{
+    border:2px solid #c8b46e;
+    border-radius:6px;
+
+    padding:13px 10px;
+    margin-top:12px;
+}
+
+.tax-box h3{
+    margin:0 0 12px;
+
+    text-align:center;
+    font-family:"Poppins", sans-serif;
+    font-size:.76rem;
+    font-weight:800;
+}
+
+.tax-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
+}
+
+.tax-grid > div:first-child{
+    padding-right:10px;
+    border-right:1px solid #d7d7d7;
+}
+
+.tax-grid strong{
+    display:block;
+    margin-bottom:7px;
+
+    text-align:center;
+    font-family:"Poppins", sans-serif;
+    font-size:.63rem;
+    font-weight:800;
+}
+
+.tax-grid p{
+    margin:0;
+
+    text-align:center;
+    font-family:"Poppins", sans-serif;
+    font-size:.56rem;
+    line-height:1.35;
+}
+
+/* Bouton */
+
+.patron-button{
+    display:block;
+    width:max-content;
+
+    margin:18px auto 0;
+    padding:10px 22px;
+
+    background:#c8b46e;
+    border-radius:6px;
+
+    color:#fff;
+    font-family:"Poppins", sans-serif;
+    font-size:.7rem;
+    font-weight:700;
+    text-decoration:none;
+
+    transition:transform .25s ease, background .25s ease;
+}
+
+.patron-button:hover{
+    background:#b5a15d;
+    transform:translateY(-2px);
+}
+
+/* ==================================
+   CONTACT + FAQ
+================================== */
+
+.support-contact{
+    width:100%;
+    padding:34px 28px;
+    background:#061a38;
+}
+
+.support-contact__container{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+.support-form-block h2,
+.support-faq h2{
+    margin:0 0 14px;
+
+    color:#fff;
+    font-family:"Poppins", sans-serif;
+    font-size:1.55rem;
+    font-weight:800;
+    line-height:1.2;
+}
+
+/* Formulaire */
+
+.support-form{
+    padding:16px;
+    border:2px solid #c8b46e;
+    border-radius:6px;
+}
+
+.support-form__grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:10px;
+}
+
+.support-field{
+    display:flex;
+    flex-direction:column;
+}
+
+.support-field label{
+    padding:5px 7px;
+
+    background:#304b6d;
+    color:#fff;
+
+    font-family:"Poppins", sans-serif;
+    font-size:.68rem;
+    font-weight:600;
+}
+
+.support-field input,
+.support-field textarea{
+    width:100%;
+
+    border:none;
+    outline:none;
+    border-radius:0 0 3px 3px;
+
+    background:#172d4d;
+    color:#fff;
+
+    font-family:"Poppins", sans-serif;
+    font-size:.8rem;
+}
+
+.support-field input{
+    height:42px;
+    padding:0 10px;
+}
+
+.support-field textarea{
+    min-height:110px;
+    padding:10px;
+    resize:none;
+}
+
+.support-field--message{
+    margin-top:10px;
+}
+
+.support-field input:focus,
+.support-field textarea:focus{
+    box-shadow:inset 0 0 0 1px #c8b46e;
+}
+
+.support-form__button{
+    display:block;
+
+    margin:16px auto 12px;
+    padding:11px 22px;
+
+    border:none;
+    border-radius:4px;
+
+    background:#c8b46e;
+    color:#fff;
+
+    font-family:"Poppins", sans-serif;
+    font-size:.72rem;
+    font-weight:700;
+
+    cursor:pointer;
+    transition:background .25s ease, transform .25s ease;
+}
+
+.support-form__button:hover{
+    background:#b39d56;
+    transform:translateY(-2px);
+}
+
+.support-form__consent{
+    max-width:440px;
+    margin:0 auto;
+
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    gap:7px;
+
+    color:#fff;
+    font-family:"Poppins", sans-serif;
+    font-size:.52rem;
+    line-height:1.4;
+}
+
+.support-form__consent input{
+    margin-top:2px;
+    accent-color:#c8b46e;
+}
+
+.support-form__consent a{
+    color:#c8b46e;
+}
+
+/* FAQ */
+
+.faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.faq-item{
+    border:2px solid #c8b46e;
+    border-radius:5px;
+    overflow:hidden;
+}
+
+.faq-question{
+    width:100%;
+    min-height:56px;
+    padding:0 16px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+
+    border:none;
+    background:transparent;
+    color:#fff;
+
+    text-align:left;
+    font-family:"Poppins", sans-serif;
+    font-size:.73rem;
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+.faq-icon{
+    flex-shrink:0;
+
+    color:#c8b46e;
+    font-size:1.2rem;
+    font-weight:400;
+
+    transition:transform .25s ease;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+
+    transition:max-height .35s ease;
+}
+
+.faq-answer p{
+    margin:0;
+    padding:0 16px 16px;
+
+    color:rgba(255,255,255,.82);
+    font-family:"Poppins", sans-serif;
+    font-size:.7rem;
+    line-height:1.6;
+}
+
+.faq-item.is-open .faq-answer{
+    max-height:180px;
+}
+
+.faq-item.is-open .faq-icon{
+    transform:rotate(45deg);
+}
+
+
+/* ==================================
+   ILS LE SOUTIENNENT
+================================== */
+
+.supporters-section{
+    width:100%;
+    padding:34px 28px 45px;
+    background:#fff;
+}
+
+.supporters-container{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+}
+
+.supporters-heading h2{
+    margin:0;
+
+    color:#080808;
+    font-family:"Poppins", sans-serif;
+    font-size:1.5rem;
+    font-weight:800;
+}
+
+.supporters-line{
+    width:155px;
+    height:2px;
+
+    margin-top:8px;
+    background:#c8b46e;
+}
+
+.supporters-logos{
+    margin-top:30px;
+
+    display:grid;
+    grid-template-columns:repeat(5, minmax(0, 1fr));
+    align-items:center;
+    gap:45px;
+}
+
+.supporter-logo{
+    min-height:90px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.supporter-logo img{
+    display:block;
+
+    width:100%;
+    max-width:180px;
+    max-height:80px;
+
+    object-fit:contain;
+
+    transition:transform .25s ease;
+}
+
+.supporter-logo:hover img{
+    transform:scale(1.05);
+}
+
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width:900px){
+
+    .support-contact__container{
+        grid-template-columns:1fr;
+    }
+
+    .support-faq{
+        margin-top:12px;
+    }
+
+    .supporters-logos{
+        grid-template-columns:repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width:600px){
+
+    .support-contact,
+    .supporters-section{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+    .support-form-block h2,
+    .support-faq h2,
+    .supporters-heading h2{
+        font-size:1.25rem;
+    }
+
+    .support-form__grid{
+        grid-template-columns:1fr;
+    }
+
+    .supporters-logos{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:25px;
+    }
+
+    .supporter-logo:last-child{
+        grid-column:1 / -1;
+    }
+
+}

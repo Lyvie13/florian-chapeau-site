@@ -1,0 +1,448 @@
+/* CSS styles for the website */
+
+/*variables*/
+:root {
+  --primary-color: #0C2950;
+  --secondary-color: #C8B46E;
+  --white-color: #FFFFFF;
+  --nav-h: 72px;
+
+}  
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #070707;
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- TYPOGRAPHIE ---- */
+h1 {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -.01em;
+}
+
+h2 {
+  font-size: clamp(1.3rem, 2.2vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -.01em;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #070707;
+}
+
+/* ---- LAYOUT ---- */
+.c {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+/* ---- BOUTONS ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  padding: .75rem 1.75rem;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.8px solid transparent;
+  transition: all .2s ease;
+  
+}
+
+.btn-nav{
+  background: #C8B46E;
+  color: white;
+  font-weight: 700;
+}
+.btn-nav:hover { 
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: var(--primary-color);
+  color: white;
+}
+.btn-outline:hover { 
+  transform: translateY(-2px);
+}
+
+.btn-outline2 {
+  background: none;
+  border: 1.8px solid var(--secondary-color);
+  color: rgb(0, 0, 0);
+}
+.btn-outline2:hover { 
+  transform: translateY(-2px);
+}
+
+/* ---- LOGO ---- */
+
+.logo-text {
+
+  color: #c8b46e;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  font-style: italic;
+
+}
+
+/* ---- NAVIGATION ---- */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  } 
+
+  .nav-links a{
+    text-decoration:none;
+    color: var(--white-color);
+    font-weight:500;
+}
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav-h);
+    padding: 0 2rem;
+    background-color:#071732;
+  } 
+
+
+
+/* ==================================
+   SECTION CONTACT
+================================== */
+
+.contact-section{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    width:100%;
+}
+
+/* =====================
+   PARTIE GAUCHE
+===================== */
+
+.contact-left{
+
+    background:
+    linear-gradient(rgba(255,255,255,.88),rgba(255,255,255,.88)),
+    url("images/montagne.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    padding:30px 45px;
+}
+
+.contact-overlay{
+    max-width:520px;
+}
+
+.contact-left h2{
+
+    margin:0;
+
+    color:#111;
+
+    font-family:"Poppins",sans-serif;
+    font-size:2rem;
+    font-weight:800;
+    line-height:1.2;
+}
+
+.contact-left h2 span{
+    color:#C8B46E;
+}
+
+.contact-left p{
+
+    margin:25px 0;
+
+    color:#333;
+
+    font-family:"Poppins",sans-serif;
+    line-height:1.6;
+}
+
+.contact-info{
+
+    display:flex;
+    flex-direction:row;
+    gap:15px;
+}
+
+.contact-info a{
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-family:"Poppins",sans-serif;
+    font-size:.9rem;
+    font-weight:500;
+}
+
+.contact-info a:hover{
+
+    color:#C8B46E;
+}
+
+/* =====================
+   PARTIE DROITE
+===================== */
+
+.contact-right{
+
+    background:#071b3a;
+
+    padding:30px 45px;
+}
+
+.contact-right h2{
+
+    margin:0 0 30px;
+
+    color:#fff;
+
+    font-family:"Poppins",sans-serif;
+    font-size:1.4rem;
+    font-weight:800;
+}
+
+.contact-form{
+    width:100%;
+}
+
+.contact-row{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+    margin-bottom:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    border:none;
+    outline:none;
+
+    background:#29466f;
+
+    color:#fff;
+
+    padding:14px;
+
+    font-family:"Poppins",sans-serif;
+    font-size:.85rem;
+
+    border-radius:5px;
+}
+
+.contact-form input[name="telephone"]{
+    height: 55px;
+    align-self: start;
+} 
+.contact-form textarea{
+
+    min-height:130px;
+
+    resize:none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+
+    color:#d6dce7;
+}
+
+/* Consentement */
+
+.contact-consent{
+
+    margin:20px 0;
+}
+
+.contact-consent label{
+
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    flex-wrap: wrap;
+
+    color:#fff;
+
+    font-family:"Poppins",sans-serif;
+    font-size:.72rem;
+    line-height:1.5;
+}
+
+.contact-consent input{
+
+    width:auto;
+
+    margin-top:3px;
+
+    accent-color:#C8B46E;
+}
+
+.contact-consent a{
+
+    color:#C8B46E;
+
+    text-decoration:none;
+    display: contents;
+}
+
+.contact-consent a:hover{
+
+    text-decoration:underline;
+}
+
+/* Bouton */
+
+.contact-form button{
+
+    padding:15px 28px;
+
+    border:2px solid #C8B46E;
+
+    background:#C8B46E;
+
+    color:#fff;
+
+    font-family:"Poppins",sans-serif;
+    font-size:.75rem;
+    font-weight:700;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.contact-form button:hover{
+
+    background:transparent;
+
+    color:#C8B46E;
+}
+
+/* ==================================
+   SECTION MÉDIAS
+================================== */
+
+.media-section {
+  width: 100%;
+  padding: 55px 30px;
+  background: #071b3a;
+}
+
+.media-container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+/* Titre */
+
+.media-heading {
+  margin-bottom: 35px;
+}
+
+.media-heading h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.media-heading h2 span {
+  color: #c8b46e;
+}
+
+/* Contenu général */
+
+.media-content {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+/* Logos à gauche */
+
+.media-logos {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.media-logo {
+  min-width: 0;
+  height: 75px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border-radius: 3px;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.media-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
+.media-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
