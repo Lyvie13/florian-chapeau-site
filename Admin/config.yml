@@ -1,0 +1,36 @@
+backend:
+  name: github
+  repo: Lyvie13/florian-chapeau-site
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    folder: "content/articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Média", name: "media", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Lien vers l'article", name: "link", widget: "string" }
+      - { label: "À la une", name: "featured", widget: "boolean", default: true }
+
+  - name: "interviews"
+    label: "Interviews"
+    folder: "content/interviews"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Lien de la vidéo", name: "video", widget: "string" }
