@@ -17,7 +17,7 @@ export default async () => {
     const url =
       `https://cdn.contentful.com/spaces/${spaceId}` +
       `/environments/master/entries` +
-      `?content_type=publication&include=2`;
+      `?content_type=article&include=2`;
 
     const response = await fetch(url, {
       headers: {
