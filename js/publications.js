@@ -1,83 +1,99 @@
-  document.addEventListener("DOMContentLoaded", chargerPublications);
+document.addEventListener("DOMContentLoaded", chargerPublications);
 
-  async function chargerPublications() {
-    const articlesContainer = document.getElementById("articles-list");
-    const interviewsContainer = document.getElementById("interviews-list");
+async function chargerPublications() {
 
-if (articlesContainer) {
-  afficherChargement(articlesContainer);
-}
+  const articlesContainer = document.getElementById("articles-list");
+  const interviewsContainer = document.getElementById("interviews-list");
 
-if (interviewsContainer) {
-  afficherChargement(interviewsContainer);
-}
-    try {
-      const response = await fetch(
-        "/.netlify/functions/publications",
-        { cache: "no-store" }
-      );
-
-      if (!response.ok) {
-        throw new Error(`Erreur HTTP : ${response.status}`);
-      }
-
-      const data = await response.json();
-
-      const assets = creerIndexImages(data.includes?.Asset || []);
-      const publications = data.items || [];
-
-const page = window.location.pathname.toLowerCase();
-console.log(page);
-
-let articles = publications
-  .filter((publication) => {
-    return normaliserTexte(publication.fields?.type) === "article";
-  })
-  .sort(trierParDate);
-
-let interviews = publications
-  .filter((publication) => {
-    return normaliserTexte(publication.fields?.type) === "interview";
-  })
-  .sort(trierParDate);
-
-if (page.endsWith("presse.html") || page === "/" || page.endsWith("/")) {
-  articles = articles.slice(0, 3);
-  interviews = interviews.slice(0, 3);
-}
-
-if (page.endsWith("articles.html")) {
-  interviews = [];
-}
-
-if (page.endsWith("interviews.html")) {
-  articles = [];
-}
-if (articlesContainer) {
-  afficherPublications(articles, articlesContainer, assets);
-}
-
-if (interviewsContainer) {
-  afficherPublications(interviews, interviewsContainer, assets);
-}
-    } catch (error) {
-      console.error("Erreur lors du chargement des publications :", error);
-
-if (articlesContainer) {
-  afficherErreur(
-    articlesContainer,
-    "Impossible de charger les articles pour le moment."
-  );
-}
-
-if (interviewsContainer) {
-  afficherErreur(
-    interviewsContainer,
-    "Impossible de charger les interviews pour le moment."
-  );
-}    }
+  if (articlesContainer) {
+    afficherChargement(articlesContainer);
   }
 
+  if (interviewsContainer) {
+    afficherChargement(interviewsContainer);
+  }
+
+  try {
+    const response = await fetch(
+      "/.netlify/functions/publications",
+      { cache: "no-store" }
+    );
+
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP : ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    const assets = creerIndexImages(data.includes?.Asset || []);
+    const publications = data.items || [];
+
+    const page = window.location.pathname.toLowerCase();
+
+    let articles = publications
+      .filter((publication) => {
+        return normaliserTexte(publication.fields?.type) === "article";
+      })
+      .sort(trierParDate);
+
+    let interviews = publications
+      .filter((publication) => {
+        return normaliserTexte(publication.fields?.type) === "interview";
+      })
+      .sort(trierParDate);
+
+    // Presse : seulement les 3 derniers
+    if (
+      page.endsWith("presse.html") ||
+      page.endsWith("/presse") ||
+      page === "/"
+    ) {
+      articles = articles.slice(0, 3);
+      interviews = interviews.slice(0, 3);
+    }
+
+    // Articles : tous les articles
+    if (
+      page.endsWith("articles.html") ||
+      page.endsWith("/articles")
+    ) {
+      interviews = [];
+    }
+
+    // Interviews : toutes les interviews
+    if (
+      page.endsWith("interviews.html") ||
+      page.endsWith("/interviews")
+    ) {
+      articles = [];
+    }
+
+    if (articlesContainer) {
+      afficherPublications(articles, articlesContainer, assets);
+    }
+
+    if (interviewsContainer) {
+      afficherPublications(interviews, interviewsContainer, assets);
+    }
+
+  } catch (error) {
+    console.error("Erreur lors du chargement des publications :", error);
+
+    if (articlesContainer) {
+      afficherErreur(
+        articlesContainer,
+        "Impossible de charger les articles pour le moment."
+      );
+    }
+
+    if (interviewsContainer) {
+      afficherErreur(
+        interviewsContainer,
+        "Impossible de charger les interviews pour le moment."
+      );
+    }
+  }
+}
   function creerIndexImages(assets) {
     return assets.reduce((index, asset) => {
       index[asset.sys.id] = asset;
