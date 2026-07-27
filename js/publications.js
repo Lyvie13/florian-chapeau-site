@@ -29,6 +29,7 @@ async function chargerPublications() {
     const publications = data.items || [];
 
     const page = window.location.pathname.toLowerCase();
+    console.log(page);
 
     let articles = publications
       .filter((publication) => {
