@@ -28,47 +28,41 @@ async function chargerPublications() {
     const assets = creerIndexImages(data.includes?.Asset || []);
     const publications = data.items || [];
 
-    const page = window.location.pathname.toLowerCase();
-    console.log(page);
+let articles = publications
+  .filter((publication) => {
+    return normaliserTexte(publication.fields?.type) === "article";
+  })
+  .sort(trierParDate);
 
-    let articles = publications
-      .filter((publication) => {
-        return normaliserTexte(publication.fields?.type) === "article";
-      })
-      .sort(trierParDate);
+let interviews = publications
+  .filter((publication) => {
+    return normaliserTexte(publication.fields?.type) === "interview";
+  })
+  .sort(trierParDate);
 
-    let interviews = publications
-      .filter((publication) => {
-        return normaliserTexte(publication.fields?.type) === "interview";
-      })
-      .sort(trierParDate);
+// Page Presse : 3 articles et 3 interviews
+if (articlesContainer && interviewsContainer) {
+  articles = articles.slice(0, 3);
+  interviews = interviews.slice(0, 3);
+}
 
-    // Presse : seulement les 3 derniers
-    if (
-      page.endsWith("presse.html") ||
-      page.endsWith("/presse") ||
-      page === "/"
-    ) {
-      articles = articles.slice(0, 3);
-      interviews = interviews.slice(0, 3);
-    }
+// Page Articles : tous les articles
+else if (articlesContainer) {
+  interviews = [];
+}
 
-    // Articles : tous les articles
-    if (
-      page.endsWith("articles.html") ||
-      page.endsWith("/articles")
-    ) {
-      interviews = [];
-    }
+// Page Interviews : toutes les interviews
+else if (interviewsContainer) {
+  articles = [];
+}
 
-    // Interviews : toutes les interviews
-    if (
-      page.endsWith("interviews.html") ||
-      page.endsWith("/interviews")
-    ) {
-      articles = [];
-    }
+if (articlesContainer) {
+  afficherPublications(articles, articlesContainer, assets);
+}
 
+if (interviewsContainer) {
+  afficherPublications(interviews, interviewsContainer, assets);
+}
     if (articlesContainer) {
       afficherPublications(articles, articlesContainer, assets);
     }
