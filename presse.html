@@ -77,7 +77,7 @@
 
     <div class="section-header">
         <h2>ARTICLE À LA UNE</h2>
-        <a href="#">VOIR TOUS LES ARTICLES →</a>
+        <a href="articles.html">VOIR TOUS LES ARTICLES →</a>    
     </div>
 
     <div id="articles-list" class="presse-grid">
@@ -90,7 +90,7 @@
 
     <div class="section-header">
         <h2>INTERVIEWS</h2>
-        <a href="#">VOIR TOUTES LES INTERVIEWS →</a>
+        <a href="interviews.html">VOIR TOUTES LES INTERVIEWS →</a>    
     </div>
 
     <div id="interviews-list" class="presse-grid">
@@ -534,13 +534,15 @@
         .filter((publication) => {
           return normaliserTexte(publication.fields?.type) === "article";
         })
-        .sort(trierParDate);
+        .sort(trierParDate)
+        .slice(0, 3);
 
       const interviews = publications
         .filter((publication) => {
           return normaliserTexte(publication.fields?.type) === "interview";
         })
-        .sort(trierParDate);
+        .sort(trierParDate)
+        .slice(0, 3);
 
       afficherPublications(articles, articlesContainer, assets);
       afficherPublications(interviews, interviewsContainer, assets);
