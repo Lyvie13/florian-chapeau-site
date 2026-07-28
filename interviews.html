@@ -13,21 +13,60 @@
 </head>
 
 <body>
-     <nav class="navbar">
-         <div class="logo-text">
-            FLORIAN 
-            <br>CHAPEAU
-        </div>
+<nav id="navbar" class="navbar">
+
+    <div class="logo-text">
+        FLORIAN
+        <br>
+        CHAPEAU
+    </div>
+
+<button class="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+
         <ul class="nav-links">
-            <li><a href="Index.html">Accueil</a></li>                
-            <li><a href="#parcours">Parcours & Objectifs</a></li>
-            <li><a href="partenariaetmécènat.html">Partenariats & Mécénat</a></li>
-            <li><a href="Presse.html">Presse</a></li>
-            <li><a href="Contact.html">Contact</a></li>
+
+            <li>
+                <a href="Index.html">Accueil</a>
+            </li>
+
+            <li>
+                <a href="Index.html#parcours">
+                    Palmarès & Objectifs
+                </a>
+            </li>
+
+            <li>
+                <a href="partenariaetmécènat.html">
+                    Partenariats & Mécénat
+                </a>
+            </li>
+
+            <li>
+                <a href="Presse.html">Presse</a>
+            </li>
+
+            <li>
+                <a href="Contact.html">Contact</a>
+            </li>
+
         </ul>
 
-        <button class="btn btn-nav">SOUTENIR FLORIAN</button>
-    </nav>
+        <button
+            class="btn btn-nav"
+            type="button"
+            onclick="window.location.href='Contact.html'"
+        >
+            SOUTENIR FLORIAN
+        </button>
+
+    </div>
+
+</nav>
 <main>
 
 <section class="presse">
@@ -42,6 +81,74 @@
 
 </section>
 </main>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <h3>FLORIAN CHAPEAU</h3>
+
+            <p>
+                Projet paralympique 2026–2030
+            </p>
+
+        </div>
+
+        <nav class="footer-links">
+
+            <a href="mentions-legales.html">
+                Mentions légales
+            </a>
+
+            <a href="confidentialite.html">
+                Politique de confidentialité
+            </a>
+
+        </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Florian Chapeau · Tous droits réservés
+        </p>
+
+        <p>
+            Site conçu et développé par
+            <a
+                href="mailto:lyviestudio@gmail.com"
+                target="_blank"
+            >
+                Lyvie Studio
+            </a>
+        </p>
+
+    </div>
+
+</footer>
 
 <script src="js/publications.js?v=3"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const navbar = document.querySelector(".navbar");
+    const toggle = document.querySelector(".menu-toggle");
+
+    if (!navbar || !toggle) return;
+
+    toggle.addEventListener("click", () => {
+        navbar.classList.toggle("menu-open");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navbar.classList.remove("menu-open");
+        });
+    });
+
+});
+</script>
+
 </body>

@@ -6,28 +6,69 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="css/global.css">
+
     <link rel="stylesheet" href="css/partenariat.css">
-    <link rel="stylesheet" href="css/global.css">
 
 </head>
 
 <body>
-     <nav class="navbar">
-         <div class="logo-text">
-            FLORIAN 
-            <br>CHAPEAU
-        </div>
+<nav id="navbar" class="navbar">
+
+    <div class="logo-text">
+        FLORIAN
+        <br>
+        CHAPEAU
+    </div>
+
+<button class="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+
         <ul class="nav-links">
-            <li><a href="Index.html">Accueil</a></li>                
-            <li><a href="#parcours">Parcours & Objectifs</a></li>
-            <li><a href="partenariaetmécènat.html">Partenariats & Mécénat</a></li>
-            <li><a href="Presse.html">Presse</a></li>
-            <li><a href="Contact.html">Contact</a></li>
+
+            <li>
+                <a href="Index.html">Accueil</a>
+            </li>
+
+            <li>
+                <a href="Index.html#parcours">
+                    Palmarès & Objectifs
+                </a>
+            </li>
+
+            <li>
+                <a href="partenariaetmécènat.html">
+                    Partenariats & Mécénat
+                </a>
+            </li>
+
+            <li>
+                <a href="Presse.html">Presse</a>
+            </li>
+
+            <li>
+                <a href="Contact.html">Contact</a>
+            </li>
+
         </ul>
 
-        <button class="btn btn-nav">SOUTENIR FLORIAN</button>
-    </nav>
+        <button
+            class="btn btn-nav"
+            type="button"
+            onclick="window.location.href='Contact.html'"
+        >
+            SOUTENIR FLORIAN
+        </button>
+
+    </div>
+
+</nav>
 
 <header class="hero">
 
@@ -51,7 +92,7 @@
             <h1 style="color: #D7BA63; margin-bottom: 65px;"> & MÉCÈNAT</h1> 
 
             <p class="subtitle">
-                Associer votre entreprise à 
+                Associez votre entreprise à 
                 <br> un projet paralympique unique en France.
             </p>
 
@@ -60,14 +101,15 @@
 
             <p class="description">
                 Ensemble, visons l’excellence et repoussons les limites 
-                jusqu’aux Jeux Paralympiques de Los Angeles 2028 
-                <br>et des Alpes 2030.
+                jusqu’aux Jeux Paralympiques de Los Angeles en 2028 
+                <br>et des Alpes en 2030.
             </p>
 
-            <div class="buttons">
-                <button>SOUTENIR FLORIAN</button>
-            </div>
-
+<div class="buttons">
+    <button onclick="window.location.href='Contact.html'">
+        SOUTENIR FLORIAN
+    </button>
+</div>
         </div>
 </header>
 
@@ -87,44 +129,49 @@
     <div class="stats-grid">
 
         <article class="stat">
-            <img src="age.svg" alt="">
+            <img src="icons/line-md--watch.svg" alt="visibilité">
             <h3>VISIBILITÉ</h3>
-            <p>Associez votre image à 
-                un athlète de haut niveau 
-               médiatisé dans les compétitions nationales et internationales
+            <p>
+               Soutenez un athlète de haut niveau et 
+               renforcez la visibilité de votre marque au 
+               cœur des grandes compétitions.
             </p>
         </article>
 
         <article class="stat">
-            <img src="objectif.svg" alt="">
+            <img src="icons/pepicons-pencil--people.svg" alt="imagesetvaleurs">
             <h3>IMAGE ET VALEURS</h3>
-            <p>Soutenez un sportif exemplaire porteur de valeurs 
-            fortes : détermination, dépassement de soi, 
-            résilience et inclusion.
+            <p>
+            Engagez-vous aux côtés d’un sportif exemplaire qui 
+            incarne des valeurs essentielles : détermination, 
+            dépassement de soi et résilience.
         </p>
         </article>
 
         <article class="stat">
-            <img src="clock.svg" alt="">
+            <img src="icons/fluent--leaf-two-48-regular.svg" alt="rse">
             <h3>ENGAGEMENT RSE</h3>
-            <p>Affirmez votre engagement sociétal en soutenant 
-            le sport paralympique et l’inclusion par le sport.
+            <p>
+            Affirmez votre engagement sociétal en soutenant le sport 
+            paralympique et en agissant concrètement pour l’inclusion.
             </p>
         </article>
 
         <article class="stat">
-            <img src="bike.svg" alt="">
+            <img src="icons/mynaui--mountain.svg" alt="territoire">
             <h3>TERRITOIRE</h3>
-            <p>Mettez en avant votre ancrage local en soutenant 
-            un athlète ambassadeur de la Savoie
+            <p> 
+            Valorisez votre ancrage territorial en accompagnant 
+            un athlète qui porte haut les couleurs de la Savoie
             </p>
         </article>
 
         <article class="stat">
-            <img src="budget.svg" alt="">
+            <img src="icons/solar--cup-outline.svg" alt="performance">
             <h3>PERFORMANCE</h3>
-            <p>Partageons ensemble l’ambition de la performance 
-            et la quête d’excellence jusqu’aux sommets.
+            <p>
+            Ensemble, portons l’ambition de l’excellence et la volonté 
+            constante de progresser.
             </p>
         </article>
 
@@ -153,22 +200,22 @@
 
                             <th class="offer-head offer-head--bronze">
                                 <strong>BRONZE</strong>
-                                <span>à partir de<br>500€ / an</span>
+                                <span>à partir de<br>500 € / an</span>
                             </th>
 
                             <th class="offer-head offer-head--silver">
                                 <strong>ARGENT</strong>
-                                <span>à partir de<br>2 000€ / an</span>
+                                <span>à partir de<br>3 000 € / an</span>
                             </th>
 
                             <th class="offer-head offer-head--gold">
                                 <strong>OR</strong>
-                                <span>à partir de<br>5 000€ / an</span>
+                                <span>à partir de<br>10 000 € / an</span>
                             </th>
 
                             <th class="offer-head offer-head--premium">
                                 <strong>PREMIUM</strong>
-                                <span>à partir de<br>10 000€ / an</span>
+                                <span>à partir de<br>20 000 € / an</span>
                             </th>
                         </tr>
                     </thead>
@@ -204,7 +251,7 @@
                             <td>—</td>
                             <td>✓</td>
                             <td>✓</td>
-                            <td>mise en avant prioritaire</td>
+                            <td>✓</td>
                         </tr>
 
                         <tr>
@@ -212,7 +259,7 @@
                             <td>—</td>
                             <td>—</td>
                             <td>✓</td>
-                            <td>logo + mention exclusive</td>
+                            <td>✓</td>
                         </tr>
 
                         <tr>
@@ -255,7 +302,7 @@
                             <td>✓</td>
                         </tr>
 
-                        <tr>
+                        <tr class="partenaire-majeur">
                             <td>Statut de partenaire majeur du projet 2026-2030</td>
                             <td>—</td>
                             <td>—</td>
@@ -281,35 +328,31 @@
             <div class="patron-card__content">
 
                 <p class="patron-intro">
-                    En tant que mécène, vous soutenez Florian par
-                    l'intermédiaire de l'association Sport Diff
-                    Paracyclisme et contribuez directement à la préparation
-                    de Florian pour les Jeux Paralympiques.
+                    
+                    En tant que mécène, vous soutenez Florian Chapeau 
+                    par l’intermédiaire de l’association Sport’dif 
+                    Paracyclisme et contribuez directement à sa 
+                    préparation pour les Jeux.
+                    
                 </p>
 
                 <div class="patron-benefits">
 
                     <article class="patron-benefit">
-                        <div class="patron-icon">♡</div>
+            <img src="icons/iconoir--donate.svg" alt="don">
                         <p>
-                            Votre soutien permet de financer le matériel,
-                            les déplacements, la préparation et le suivi médical.
-                        </p>
+                        Votre soutien permet de financer le matériel, 
+                        les entraînements, les déplacements, le suivi 
+                        médica                        
+                    </p>
+
                     </article>
 
                     <article class="patron-benefit">
-                        <div class="patron-icon">▣</div>
+            <img src="icons/line-md--clipboard-check.svg" alt="fisc">
                         <p>
                             Votre don ouvre droit à une réduction fiscale
                             selon la réglementation en vigueur.
-                        </p>
-                    </article>
-
-                    <article class="patron-benefit">
-                        <div class="patron-icon">♧</div>
-                        <p>
-                            Aucune contrepartie commerciale :
-                            un acte de soutien à impact.
                         </p>
                     </article>
 
@@ -324,16 +367,10 @@
                         <div>
                             <strong>ENTREPRISES</strong>
                             <p>
-                                60% du montant du don déductibles de l'impôt
-                                sur les sociétés dans la limite de 5‰ du CA HT.
-                            </p>
-                        </div>
-
-                        <div>
-                            <strong>PARTICULIERS</strong>
-                            <p>
-                                66% du montant du don déductibles de l'impôt
-                                sur le revenu dans la limite de 20% du revenu imposable.
+                             Le mécénat ouvre droit à une réduction 
+                             fiscale de 60 % du montant du don dans 
+                             la limite de 0,5 % du chiffre d’affaires.   
+                                
                             </p>
                         </div>
 
@@ -341,10 +378,11 @@
 
                 </div>
 
-                <a href="#contact" class="patron-button">
-                    SOUTENIR
-                </a>
-
+                    <p>
+                     Le mécénat ne prévoit pas de contreparties 
+                     commerciales mais inclut des remerciements 
+                     institutionnels.  
+                    </p>
             </div>
 
         </aside>
@@ -370,18 +408,28 @@
             </div>
 
 
-            <form
-                class="support-form"
-                name="demande-partenariat"
-                method="POST"
-                data-netlify="true"
-            >
+<form
+    class="contact-form"
+    id="contact-form"
+>
 
-                <input
-                    type="hidden"
-                    name="form-name"
-                    value="demande-partenariat"
-                >
+    <input
+        type="hidden"
+        name="access_key"
+        value="70930b4b-237d-4e82-a121-1a9e58332a54"
+    >
+
+    <input
+        type="hidden"
+        name="subject"
+        value="Nouvelle demande de partenariat - Florian Chapeau"
+    >
+
+    <input
+        type="hidden"
+        name="from_name"
+        value="Site Florian Chapeau"
+    >            
 
                 <div class="support-form__grid">
 
@@ -440,6 +488,8 @@
                 <button type="submit" class="support-form__button">
                     ENVOYER MA DEMANDE
                 </button>
+                <p class="form-message" aria-live="polite"></p>
+
 
                 <label class="support-form__consent">
 
@@ -599,33 +649,33 @@
         <div class="supporters-logos">
 
             <a href="#" class="supporter-logo" aria-label="AlpVR">
-                <img src="images/partenaires/alpvr.png" alt="AlpVR">
+                <img src="https://res.cloudinary.com/dhmehfgjo/image/upload/v1785223105/Alpvrd.png" alt="AlpVR">
             </a>
 
             <a href="#" class="supporter-logo" aria-label="Cycles Aix'perts">
                 <img
-                    src="images/partenaires/cycles-aixperts.png"
+                    src="https://res.cloudinary.com/dhmehfgjo/image/upload/v1785223279/cycleAixPert.png"
                     alt="Cycles Aix'perts"
                 >
             </a>
 
             <a href="#" class="supporter-logo" aria-label="Groupe Agrica">
                 <img
-                    src="images/partenaires/agrica.png"
+                    src="https://res.cloudinary.com/dhmehfgjo/image/upload/v1785223105/logo-groupe-agrica_nijig9.svg"
                     alt="Groupe Agrica"
                 >
             </a>
 
             <a href="#" class="supporter-logo" aria-label="Crédit Agricole">
                 <img
-                    src="images/partenaires/credit-agricole.png"
+                    src="https://res.cloudinary.com/dhmehfgjo/image/upload/v1785223105/Logo-CADS_hwiwop.svg"
                     alt="Crédit Agricole des Savoie"
                 >
             </a>
 
             <a href="#" class="supporter-logo" aria-label="Fitness House">
                 <img
-                    src="images/partenaires/fitness-house.png"
+                    src="https://res.cloudinary.com/dhmehfgjo/image/upload/v1785223131/fitnessHouse.png"
                     alt="Fitness House"
                 >
             </a>
@@ -664,34 +714,54 @@
 
             <div class="contact-info">
 
+              <div class="contact-person">
+                <strong>Caroline Serre</strong>
+              </div>
+
                 <a href="tel:+33629927313">
-                    📞 06 29 92 73 13
+                  <img src="icons/line-md--phone.svg" alt="">
+                  06 29 92 73 13
                 </a>
 
                 <a href="mailto:contact@florianchapeau.fr">
-                    ✉ contact@florianchapeau.fr
+                  <img src="icons/line-md--email.svg" alt="">
+                  contact@florianchapeau.fr
                 </a>
+             
 
             </div>
 
         </div>
 
     </div>
-
     <!-- Partie droite -->
 
     <div class="contact-right">
 
         <h2>PRENONS CONTACT</h2>
 
-        <form
-            class="contact-form"
-            name="contact"
-            method="POST"
-            data-netlify="true"
-        >
+<form
+    class="contact-form"
+    id="contact-form"
+>
 
-            <input type="hidden" name="form-name" value="contact">
+    <input
+        type="hidden"
+        name="access_key"
+        value="70930b4b-237d-4e82-a121-1a9e58332a54"
+    >
+
+    <input
+        type="hidden"
+        name="subject"
+        value="Nouvelle demande de partenariat - Florian Chapeau"
+    >
+
+    <input
+        type="hidden"
+        name="from_name"
+        value="Site Florian Chapeau"
+    >            
 
             <div class="contact-row">
 
@@ -748,12 +818,60 @@
             <button type="submit">
                 ENVOYER MA DEMANDE
             </button>
+                <p class="form-message" aria-live="polite"></p>
 
         </form>
 
     </div>
 
 </section>
+</footer>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <h3>FLORIAN CHAPEAU</h3>
+
+            <p>
+                Projet paralympique 2026–2030
+            </p>
+
+        </div>
+
+        <nav class="footer-links">
+
+            <a href="mentions-legales.html">
+                Mentions légales
+            </a>
+
+            <a href="confidentialite.html">
+                Politique de confidentialité
+            </a>
+
+        </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Florian Chapeau · Tous droits réservés
+        </p>
+
+        <p>
+            Site conçu et développé par
+            <a
+                href="mailto:lyviestudio@gmail.com"
+                target="_blank"
+            >
+                Lyvie Studio
+            </a>
+        </p>
+
+    </div>
+
 </footer>
 
 
@@ -786,4 +904,90 @@
 
     });
 </script>
+<script>
+let lastScroll = 0;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll <= 0) {
+        navbar.classList.remove("nav-hidden");
+        return;
+    }
+
+    if (currentScroll > lastScroll) {
+        navbar.classList.add("nav-hidden");
+    } else {
+        navbar.classList.remove("nav-hidden");
+    }
+
+    lastScroll = currentScroll;
+});
+</script>
+<script>
+const form = document.getElementById("contact-form");
+const message = document.querySelector(".form-message");
+const button = form.querySelector("button");
+
+form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    button.disabled = true;
+    button.textContent = "ENVOI EN COURS...";
+
+    const data = new FormData(form);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+
+        method: "POST",
+
+        body: data
+
+    });
+
+    const result = await response.json();
+
+    if(result.success){
+
+        message.textContent = "✓ Votre message a bien été envoyé.";
+        message.className = "form-message success";
+
+        form.reset();
+
+    }else{
+
+        message.textContent = "Une erreur est survenue. Merci de réessayer.";
+        message.className = "form-message error";
+
+    }
+
+    button.disabled = false;
+    button.textContent = "ENVOYER MA DEMANDE";
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const navbar = document.querySelector(".navbar");
+    const toggle = document.querySelector(".menu-toggle");
+
+    if (!navbar || !toggle) return;
+
+    toggle.addEventListener("click", () => {
+        navbar.classList.toggle("menu-open");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navbar.classList.remove("menu-open");
+        });
+    });
+
+});
+</script>
+
+
 </body>

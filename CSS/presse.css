@@ -18,27 +18,35 @@
 
 .hero-image {
     position: absolute;
-    right: 15%;
+    right: 10%;
     bottom: 0;
-    width: 58%;
+
+    width: 62%;
     height: 100%;
+
     object-fit: cover;
     object-position: center;
+right:8%;
+    width:65%;
     z-index: 1;
 }
-
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(
-        circle at 60% 49%,
-        rgba(34, 61, 108, 0) 14%,
-        rgba(53, 76, 116, 0.73) 30%,
-        rgba(7, 23, 50, 1) 40%,
-        rgba(7, 23, 50, 1) 57%
-    );
     z-index: 2;
-}
+
+background: linear-gradient(
+    to right,
+    #071732 28.99%,
+     rgba(7, 23, 50, 0.96) 31.93%,
+      rgba(7, 23, 50, 0.55) 36.97%, 
+      rgba(7, 23, 50, 0) 54.2%, 
+      rgba(7, 23, 50, 0) 68.07%, 
+      rgba(7, 23, 50, 0.55) 77.31%, 
+      rgba(7, 23, 50, 0.96) 85.29%, 
+      #071732 90.34%);    
+    
+    }
 
 .hero-content {
     position: relative;
@@ -96,87 +104,6 @@
     background: #D7BA63;
     color: #0F274D;
 
-}
-
-
-/*=======================
-pourquoi soutenir
-=========================*/
-
-.support-section {
-  width: 100%;
-  background: #fff;
-  padding: 30px 28px 50px;
-}
-
-.support-title {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.support-title h2 {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-size: 2.2rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #050505;
-}
-
-
-.stats-grid{
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 20px;
-}
-.stat{
-    position:relative;
-    margin-top: 20px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-
-    padding:0 15px;
-}
-
-
-/* Icônes */
-
-.stat img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
-    margin-bottom:18px;
-}
-
-/* titres */
-
-.stat h3{
-    margin:0 0 10px;
-
-    color:#000000;
-
-    font-size:1.36rem;
-    font-weight:650;
-    line-height:1;
-}
-
-/* Descriptions */
-
-.stat p{
-    font-size: 0.9rem;
-    max-width: 280px;
-
-    margin: 0;
-
-    color: #000;
-    font-weight: 400;
-    line-height: 1.35;
-
-    max-width: 260px;
 }
 
 /*--- gold line ---*/
@@ -338,34 +265,6 @@ pourquoi soutenir
 
 }
 
-@media(max-width:1000px){
-
-.presse-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-@media(max-width:700px){
-
-.section-header{
-
-flex-direction:column;
-align-items:flex-start;
-gap:15px;
-
-}
-
-.presse-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
 
 #articles-list,
 #interviews-list {
@@ -473,16 +372,138 @@ grid-template-columns:1fr;
   color: #ffb4b4;
 }
 
-@media (max-width: 950px) {
   #articles-list,
   #interviews-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .btn-secondary{
+    position:relative;
+    z-index:3;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:15px 30px;
+
+    background:#0e2748;
+    color:white;
+
+    border-radius:8px;
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
 }
 
-@media (max-width: 650px) {
-  #articles-list,
-  #interviews-list {
-    grid-template-columns: 1fr;
-  }
+.btn-secondary:hover{
+    background:#183c68;
+    transform: translateY(-2px);
+
+}
+
+/* ==================================
+   DOSSIER SPONSORING + MÉDIAS
+================================== */
+
+.press-bottom-section {
+  width: 100%;
+  background: #ffffff;
+}
+
+.press-bottom-container {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 190px;
+}
+
+/* Blocs gauche et droite */
+
+.press-download-block,
+.press-trust-block {
+  padding: 28px 25px 32px;
+}
+
+.press-download-block {
+  border-right: 1px solid #dddddd;
+}
+
+/* Titres */
+
+.press-download-block h2,
+.press-trust-block h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Petit trait doré */
+
+.press-bottom-line {
+  width: 70px;
+  height: 2px;
+
+  margin: 12px 0 22px;
+
+  background: #c8b46e;
+}
+
+/* Bouton téléchargement */
+
+.press-download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 18px;
+
+  background: #c8b46e;
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: 2px solid #c8b46e;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.press-download-button:hover {
+  background: transparent;
+  color: #c8b46e;
+  transform: translateY(-2px);
+}
+
+/* Logos */
+
+.press-trust-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.press-trust-logos img {
+  display: block;
+
+  width: auto;
+  max-width: 95px;
+  height: 42px;
+
+  object-fit: contain;
 }

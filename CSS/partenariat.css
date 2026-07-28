@@ -19,27 +19,35 @@
 
 .hero-image {
     position: absolute;
-    right: 15%;
+    right: 10%;
     bottom: 0;
-    width: 58%;
+
+    width: 62%;
     height: 100%;
+
     object-fit: cover;
     object-position: center;
+right:8%;
+    width:65%;
     z-index: 1;
 }
-
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(
-        circle at 60% 49%,
-        rgba(34, 61, 108, 0) 14%,
-        rgba(53, 76, 116, 0.73) 30%,
-        rgba(7, 23, 50, 1) 40%,
-        rgba(7, 23, 50, 1) 57%
-    );
     z-index: 2;
-}
+
+background: linear-gradient(
+    to right,
+    #071732 28.99%,
+     rgba(7, 23, 50, 0.96) 31.93%,
+      rgba(7, 23, 50, 0.55) 36.97%, 
+      rgba(7, 23, 50, 0) 54.2%, 
+      rgba(7, 23, 50, 0) 68.07%, 
+      rgba(7, 23, 50, 0.55) 77.31%, 
+      rgba(7, 23, 50, 0.96) 85.29%, 
+      #071732 90.34%);    
+    
+    }
 
 .hero-content {
     position: relative;
@@ -82,6 +90,7 @@
     gap: 20px;
     margin-top: 40px;
 }
+
 .buttons button {
     background: transparent;
     color: white;
@@ -350,8 +359,8 @@ pourquoi soutenir
 /* Textes longs dans la dernière colonne */
 
 .offers-table tbody td:last-child{
-    font-size:.62rem;
-    font-weight:500;
+    font-size: 1.1rem;
+    font-weight:600;
 }
 
 /* ==================================
@@ -359,121 +368,107 @@ pourquoi soutenir
 ================================== */
 
 .patron-card__content{
-    border:2px solid #c8b46e;
-    border-radius:7px;
-
-    padding:16px 14px 18px;
+    border: 2px solid #c8b46e;
+    border-radius: 7px;
+    padding: 9px 26px;
 }
 
 .patron-intro{
-    margin:0 0 24px;
+    margin: 0 0 30px;
 
-    font-family:"Poppins", sans-serif;
-    font-size:.76rem;
-    line-height:1.45;
-    color:#111;
+    font-family: "Poppins", sans-serif;
+    font-size: .9rem;
+    line-height: 1.55;
+    color: #111;
 }
 
 .patron-benefits{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:20px 14px;
-    margin-bottom:20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 28px;
 }
 
 .patron-benefit{
-    text-align:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
 }
 
-.patron-benefit:last-child{
-    grid-column:1 / -1;
-    width:55%;
-    margin:0 auto;
-}
-
-.patron-icon{
-    margin-bottom:8px;
-
-    font-size:2rem;
-    line-height:1;
+.patron-benefit img{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 14px;
 }
 
 .patron-benefit p{
-    margin:0;
+    max-width: 260px;
+    margin: 0;
 
-    font-family:"Poppins", sans-serif;
-    font-size:.62rem;
-    line-height:1.35;
+    font-family: "Poppins", sans-serif;
+    font-size: .75rem;
+    line-height: 1.45;
 }
 
 /* Réduction fiscale */
 
 .tax-box{
-    border:2px solid #c8b46e;
-    border-radius:6px;
+    border: 2px solid #c8b46e;
+    border-radius: 6px;
 
-    padding:13px 10px;
-    margin-top:12px;
+    padding: 20px;
+    margin-top: 12px;
 }
 
 .tax-box h3{
-    margin:0 0 12px;
+    margin: 0 0 18px;
 
-    text-align:center;
-    font-family:"Poppins", sans-serif;
-    font-size:.76rem;
-    font-weight:800;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: .9rem;
+    font-weight: 800;
 }
 
 .tax-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:12px;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .tax-grid > div:first-child{
-    padding-right:10px;
-    border-right:1px solid #d7d7d7;
+    padding-right: 0;
+    border-right: none;
 }
 
 .tax-grid strong{
-    display:block;
-    margin-bottom:7px;
+    display: block;
+    margin-bottom: 10px;
 
-    text-align:center;
-    font-family:"Poppins", sans-serif;
-    font-size:.63rem;
-    font-weight:800;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: .75rem;
+    font-weight: 800;
 }
 
 .tax-grid p{
-    margin:0;
+    max-width: 420px;
+    margin: 0 auto;
 
-    text-align:center;
-    font-family:"Poppins", sans-serif;
-    font-size:.56rem;
-    line-height:1.35;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: .7rem;
+    line-height: 1.45;
 }
 
-/* Bouton */
+.patron-card__content > p:last-child{
+    margin: 24px 0 0;
 
-.patron-button{
-    display:block;
-    width:max-content;
-
-    margin:18px auto 0;
-    padding:10px 22px;
-
-    background:#c8b46e;
-    border-radius:6px;
-
-    color:#fff;
-    font-family:"Poppins", sans-serif;
-    font-size:.7rem;
-    font-weight:700;
-    text-decoration:none;
-
-    transition:transform .25s ease, background .25s ease;
+    font-family: "Poppins", sans-serif;
+    font-size: .78rem;
+    line-height: 1.5;
 }
 
 .patron-button:hover{
@@ -481,7 +476,11 @@ pourquoi soutenir
     transform:translateY(-2px);
 }
 
-/* ==================================
+
+.partenaire-majeur td{
+    background-color: #e8dcc0 !important;
+    font-weight: 600;
+}/* ==================================
    CONTACT + FAQ
 ================================== */
 
@@ -602,30 +601,33 @@ pourquoi soutenir
     transform:translateY(-2px);
 }
 
+
+.support-form__consent a{
+    color:#c8b46e;
+}
+
 .support-form__consent{
     max-width:440px;
     margin:0 auto;
 
     display:flex;
     align-items:flex-start;
-    justify-content:center;
+    justify-content:flex-start;
     gap:7px;
 
     color:#fff;
     font-family:"Poppins", sans-serif;
-    font-size:.52rem;
+    font-size:0.8rem;
     line-height:1.4;
 }
 
-.support-form__consent input{
-    margin-top:2px;
+.support-form__consent input[type="checkbox"]{
+    width:15px;
+    height:15px;
+    flex-shrink:0;
+    margin:1px 0 0;
     accent-color:#c8b46e;
 }
-
-.support-form__consent a{
-    color:#c8b46e;
-}
-
 /* FAQ */
 
 .faq-list{
@@ -765,51 +767,639 @@ pourquoi soutenir
 }
 
 
-/* ==================================
-   RESPONSIVE
-================================== */
+/* =========================================================
+   RESPONSIVE PAGE PARTENARIAT
+   Tablette / Téléphone / Petit téléphone
+========================================================= */
 
-@media (max-width:900px){
 
-    .support-contact__container{
-        grid-template-columns:1fr;
+/* =========================================================
+   TABLETTE
+   Jusqu'à 1024px
+========================================================= */
+
+@media screen and (max-width: 1024px) {
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        height: 630px;
     }
 
-    .support-faq{
-        margin-top:12px;
+    .hero-image {
+        right: 0;
+        width: 72%;
+        height: 100%;
+        object-position: center;
     }
 
-    .supporters-logos{
-        grid-template-columns:repeat(3, minmax(0, 1fr));
+    .hero-overlay {
+        background: linear-gradient(
+            to right,
+            #071732 0%,
+            rgba(7, 23, 50, 0.98) 30%,
+            rgba(7, 23, 50, 0.78) 48%,
+            rgba(7, 23, 50, 0.18) 75%,
+            rgba(7, 23, 50, 0.7) 100%
+        );
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 90px 35px 0;
+    }
+
+    .hero-left {
+        width: 50%;
+    }
+
+    .hero-left h1 {
+        font-size: 52px;
+        line-height: 1.05;
+    }
+
+    .subtitle,
+    .description {
+        font-size: 15px;
+    }
+
+    .description {
+        margin-bottom: 45px;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .buttons button {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       POURQUOI SOUTENIR
+    ========================= */
+
+    .support-section {
+        padding: 50px 25px;
+    }
+
+    .support-title h2 {
+        font-size: 1.85rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 40px 20px;
+    }
+
+    .stat h3 {
+        font-size: 1.2rem;
+    }
+
+    .stat p {
+        font-size: 0.85rem;
+    }
+
+
+    /* =========================
+       OFFRES
+    ========================= */
+
+    .offers-section {
+        padding: 55px 25px;
+    }
+
+    .offers-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .offers-partnership > h2,
+    .patron-card > h2 {
+        font-size: 1.65rem;
+    }
+
+    .offers-table {
+        min-width: 760px;
+    }
+
+    .offers-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .patron-card {
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .patron-card__content {
+        padding: 25px;
+    }
+
+    .patron-benefits {
+        gap: 25px;
+    }
+
+
+    /* =========================
+       CONTACT + FAQ
+    ========================= */
+
+    .support-contact {
+        padding: 50px 25px;
+    }
+
+    .support-contact__container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .support-form-block,
+    .support-faq {
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .support-form-block h2,
+    .support-faq h2 {
+        font-size: 1.45rem;
+    }
+
+
+    /* =========================
+       LOGOS
+    ========================= */
+
+    .supporters-section {
+        padding: 50px 25px;
+    }
+
+    .supporters-logos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 35px;
     }
 
 }
 
-@media (max-width:600px){
 
-    .support-contact,
-    .supporters-section{
-        padding-left:16px;
-        padding-right:16px;
+/* =========================================================
+   TÉLÉPHONE
+   Jusqu'à 768px
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* =========================
+       HERO MOBILE
+    ========================= */
+
+    .hero {
+        height: auto;
+        min-height: 680px;
+        padding-top: 68px;
+    }
+
+    .hero-image {
+        top: 0;
+        right: 0;
+        bottom: auto;
+
+        width: 100%;
+        height: 100%;
+
+        object-position: 65% center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            to bottom,
+            rgba(7, 23, 50, 0.45) 0%,
+            rgba(7, 23, 50, 0.68) 40%,
+            #071732 82%,
+            #071732 100%
+        );
+    }
+
+    .hero-content {
+        min-height: 612px;
+        padding: 65px 24px 40px;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-left h1 {
+        font-size: clamp(40px, 12vw, 54px);
+        line-height: 1.05;
+    }
+
+    .subtitle {
+        margin-top: 25px;
+        margin-bottom: 18px;
+        font-size: 15px;
+    }
+
+    .description {
+        max-width: 500px;
+        margin: 20px 0 30px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .gold-line {
+        width: 170px;
+    }
+
+    .buttons {
+        width: 100%;
+        margin-top: 22px;
+
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .buttons button {
+        width: 100%;
+        max-width: 340px;
+        min-height: 54px;
+
+        padding: 13px 18px;
+
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       POURQUOI SOUTENIR
+    ========================= */
+
+    .support-section {
+        padding: 50px 22px;
+    }
+
+    .support-title {
+        margin-bottom: 20px;
+    }
+
+    .support-title h2 {
+        font-size: 1.6rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 15px;
+    }
+
+    .stat {
+        margin-top: 0;
+        padding: 0 8px;
+    }
+
+    .stat img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .stat h3 {
+        font-size: 1.05rem;
+        line-height: 1.25;
+    }
+
+    .stat p {
+        font-size: 0.8rem;
+    }
+
+
+    /* =========================
+       OFFRES
+    ========================= */
+
+    .offers-section {
+        padding: 50px 18px;
+    }
+
+    .offers-container {
+        gap: 40px;
+    }
+
+    .offers-partnership > h2,
+    .patron-card > h2 {
+        font-size: 1.45rem;
+        line-height: 1.25;
+    }
+
+    .gold-line2 {
+        width: 150px;
+        margin-bottom: 30px;
+    }
+
+    /* Le tableau reste horizontal avec défilement */
+
+    .offers-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .offers-table {
+        min-width: 720px;
+    }
+
+    .offer-head {
+        height: 95px;
+    }
+
+    .offer-head strong {
+        font-size: 0.82rem;
+    }
+
+    .offer-head span {
+        font-size: 0.58rem;
+    }
+
+    .offers-table tbody td {
+        padding: 8px 6px;
+        font-size: 0.65rem;
+    }
+
+    .offers-table tbody td:not(:first-child),
+    .offers-table tbody td:last-child {
+        font-size: 0.9rem;
+    }
+
+
+    /* =========================
+       MÉCÉNAT
+    ========================= */
+
+    .patron-card__content {
+        padding: 24px 18px;
+    }
+
+    .patron-intro {
+        font-size: 0.85rem;
+    }
+
+    .patron-benefits {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .patron-benefit img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .patron-benefit p {
+        font-size: 0.8rem;
+    }
+
+    .tax-box {
+        padding: 18px 14px;
+    }
+
+    .tax-box h3 {
+        font-size: 0.85rem;
+    }
+
+    .tax-grid p {
+        font-size: 0.7rem;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .support-contact {
+        padding: 50px 18px;
     }
 
     .support-form-block h2,
-    .support-faq h2,
-    .supporters-heading h2{
-        font-size:1.25rem;
+    .support-faq h2 {
+        font-size: 1.3rem;
     }
 
-    .support-form__grid{
-        grid-template-columns:1fr;
+    .support-form {
+        padding: 14px;
     }
 
-    .supporters-logos{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
-        gap:25px;
+    .support-form__grid {
+        grid-template-columns: 1fr;
     }
 
-    .supporter-logo:last-child{
-        grid-column:1 / -1;
+    .support-field--message {
+        margin-top: 10px;
+    }
+
+    .support-form__button {
+        width: 100%;
+        min-height: 46px;
+        margin-top: 18px;
+    }
+
+    .support-form__consent {
+        font-size: 0.72rem;
+    }
+
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .support-faq {
+        margin-top: 10px;
+    }
+
+    .faq-question {
+        min-height: 58px;
+        padding: 10px 14px;
+
+        font-size: 0.72rem;
+        line-height: 1.4;
+    }
+
+    .faq-answer p {
+        padding: 0 14px 16px;
+        font-size: 0.7rem;
+    }
+
+
+    /* =========================
+       LOGOS
+    ========================= */
+
+    .supporters-section {
+        padding: 45px 18px;
+    }
+
+    .supporters-heading h2 {
+        font-size: 1.3rem;
+    }
+
+    .supporters-line {
+        width: 110px;
+    }
+
+    .supporters-logos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 20px;
+    }
+
+    .supporter-logo {
+        min-height: 75px;
+    }
+
+    .supporter-logo img {
+        max-width: 140px;
+        max-height: 65px;
+    }
+
+}
+
+
+/* =========================================================
+   PETIT TÉLÉPHONE
+   Jusqu'à 430px
+========================================================= */
+
+@media screen and (max-width: 420px) {
+
+    /* Hero */
+
+    .hero {
+        min-height: 640px;
+    }
+
+    .hero-content {
+        min-height: 576px;
+        padding: 45px 18px 30px;
+    }
+
+    .hero-left h1 {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .subtitle br,
+    .description br {
+        display: none;
+    }
+
+    .buttons button {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+
+    /* Statistiques */
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .stat {
+        padding: 28px 10px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .stat:last-child {
+        border-bottom: none;
+    }
+
+    .stat p {
+        max-width: 300px;
+    }
+
+
+    /* Offres */
+
+    .offers-section {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .offers-partnership > h2,
+    .patron-card > h2 {
+        font-size: 1.3rem;
+    }
+
+    .offers-table {
+        min-width: 680px;
+    }
+
+
+    /* Mécénat */
+
+    .patron-card__content {
+        padding: 20px 14px;
+    }
+
+    .tax-box {
+        padding: 16px 10px;
+    }
+
+
+    /* Formulaire */
+
+    .support-contact {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .support-form {
+        padding: 12px;
+    }
+
+    .support-field input {
+        height: 45px;
+    }
+
+    .support-field textarea {
+        min-height: 125px;
+    }
+
+
+    /* FAQ */
+
+    .faq-question {
+        font-size: 0.68rem;
+    }
+
+
+    /* Logos */
+
+    .supporters-logos {
+        gap: 20px 15px;
+    }
+
+    .supporter-logo img {
+        max-width: 120px;
+    }
+
+    .supporter-logo:last-child {
+        grid-column: 1 / -1;
     }
 
 }

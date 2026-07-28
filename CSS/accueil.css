@@ -19,27 +19,35 @@
 
 .hero-image {
     position: absolute;
-    right: 15%;
+    right: 10%;
     bottom: 0;
-    width: 58%;
+
+    width: 62%;
     height: 100%;
+
     object-fit: cover;
     object-position: center;
+right:8%;
+    width:65%;
     z-index: 1;
 }
-
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(
-        circle at 55% 50%,
-        rgba(34, 61, 108, 0) 23%,
-        rgba(53, 76, 116, 0.73) 37%,
-        rgba(7, 23, 50, 1) 47%,
-        rgba(0, 0, 0, 1) 130%
-    );
     z-index: 2;
-}
+
+background: linear-gradient(
+    to right,
+    #071732 28.99%,
+     rgba(7, 23, 50, 0.96) 31.93%,
+      rgba(7, 23, 50, 0.55) 36.97%, 
+      rgba(7, 23, 50, 0) 54.2%, 
+      rgba(7, 23, 50, 0) 68.07%, 
+      rgba(7, 23, 50, 0.55) 77.31%, 
+      rgba(7, 23, 50, 0.96) 85.29%, 
+      #071732 90.34%);    
+    
+    }
 
 .hero-content {
     position: relative;
@@ -148,11 +156,11 @@ HISTOIRE
 
 .story .container{
     width: min(1200px,90%);
-    margin: auto;
+    margin-left: 94px;
 
     display: grid;
     grid-template-columns: 380px 1fr;
-    gap: 60px;
+    gap: 90px;
     align-items: center;
 }
 .story-image img{
@@ -209,7 +217,7 @@ HISTOIRE
     align-items:center;
     justify-content:center;
 
-    padding:15px 30px;
+    padding:15px 15px;
 
     background:#0e2748;
     color:white;
@@ -411,8 +419,7 @@ PARCOURS
     object-position:center;
 
     transform:skewX(7deg) translateX(-6%);
-}
-.sport-card-content{
+}.sport-card-content{
     position:absolute;
     left:20px;
     right:20px;
@@ -445,18 +452,17 @@ PARCOURS
     );
 }
 
-.sport-card:nth-child(1) img {
-    object-position: 48% center;
+.sport-card:nth-child(1) img{
+    transform:skewX(7deg) translateX(-10%);
+    width: 120%;
 }
-
 .sport-card:nth-child(2) img {
     object-position: 52% center;
 }
 
-.sport-card:nth-child(3) img {
-    object-position: 91% center;
+.sport-card:nth-child(3) img{
+    transform:skewX(7deg) translateX(-18%);
 }
-
 /*=======================
 pourquoi soutenir
 =========================*/
@@ -464,7 +470,7 @@ pourquoi soutenir
 .support-section {
   width: 100%;
   background: #fff;
-  padding: 18px 28px 26px;
+  padding: 35px 28px 40px;
 }
 
 .support-title {
@@ -486,78 +492,60 @@ pourquoi soutenir
 }
 
 .support-grid{
-    width: min(1350px, 100%);
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 35px;
-}
-.support-item {
-  min-height: 150px;
-  padding: 0 22px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  text-align: center;
+    width:min(1350px,100%);
+    margin:60px auto 0;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
 }
 
 .support-item{
     position:relative;
-    padding:0 25px;
+    padding:0 40px;
+    text-align:center;
 }
 
 .support-item:not(:first-child)::before{
     content:"";
     position:absolute;
-    left:-20px;
-    top:10px;
-    bottom:10px;
+    left:0;
+    top:25px;
+    bottom:25px;
     width:1px;
-    background:#bcbcbc;
+    background:#d7d7d7;
 }
-.support-icon {
-  width: 58px;
-  height: 58px;
-  margin-bottom: 6px;
-}
+.support-icon{
+    height:72px;
 
-.support-icon svg {
-  width: 100%;
-  height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-  fill: none;
-  stroke: #151515;
-  stroke-width: 3.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+    margin-bottom:18px;
 }
 
-.support-item h3 {
-  margin: 2px 0 10px;
-
-  font-family: "Poppins", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 800;
-  line-height: 1.15;
-
-  color: #070707;
+.support-icon img{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+}
+.support-item h3{
+    margin:0 0 18px;
+    font-size:1.35rem;
+    font-weight:700;
+    letter-spacing:.5px;
 }
 
-.support-item p {
+.support-item p{
+    margin:0 auto;
+    max-width:250px;
 
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  line-height: 1.35;
-  max-width:260px;
-  margin:auto;
-  line-height:1.25;
-  font-size:1rem;
-  color: #151515;
+    font-size:1.08rem;
+    line-height:1.55;
+    color:#222;
 }
-
-/*---chriffres--- */
+/*==============
+chriffres
+================ */
 
 .stats-section{
     background:#071b3a;
@@ -616,7 +604,14 @@ pourquoi soutenir
     height:48px;
     object-fit:contain;
     margin-bottom:18px;
-}
+filter: brightness(0) 
+saturate(100%) 
+invert(74%) 
+sepia(34%) 
+saturate(486%) 
+hue-rotate(10deg) 
+brightness(96%) 
+contrast(90%);}
 
 /* Chiffres */
 
@@ -712,16 +707,19 @@ pourquoi soutenir
 /* Icône */
 
 .partner-card__icon {
-  min-height: 52px;
-  margin-bottom: 8px;
-
+min-height:60px;
+    margin-bottom:14px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   font-size: 2.6rem;
   line-height: 1;
+    width:42px;
+    height:42px;
+    object-fit:contain;
 }
+
 
 /* Titre */
 
@@ -805,8 +803,14 @@ pourquoi soutenir
 .partner-card--bronze {
   color: #b87500;
 }
+.partner-card--bronze .partner-card__icon img{
+filter: brightness(0) saturate(100%)
+            invert(50%) sepia(93%) saturate(1200%)
+            hue-rotate(15deg) brightness(80%) contrast(98%);
+        }
 
-.partner-card--bronze .partner-card__list li {
+
+        .partner-card--bronze .partner-card__list li {
   color: #111111;
     margin-top: 40px;
 
@@ -820,6 +824,12 @@ pourquoi soutenir
 
 .partner-card--silver {
   color: #a8a8a8;
+}
+
+.partner-card--silver .partner-card__icon img{
+    filter: brightness(0) saturate(100%)
+            invert(71%) sepia(0%) saturate(0%)
+            hue-rotate(180deg) brightness(94%) contrast(88%);
 }
 
 .partner-card--silver .partner-card__list li {
@@ -843,6 +853,12 @@ pourquoi soutenir
   margin-top: 30px;
 }
 
+.partner-card--gold .partner-card__icon img{
+    filter: brightness(0) saturate(100%)
+            invert(71%) sepia(98%) saturate(977%)
+            hue-rotate(3deg) brightness(85%) contrast(102%);
+}
+
 .partner-card--gold .partner-card__list li::before {
   color: #e3ad00;
 }
@@ -853,7 +869,11 @@ pourquoi soutenir
   color: #d7ba63;
   background: #071b3a;
 }
-
+.partner-card--premium .partner-card__icon img{
+    filter: brightness(0) saturate(100%)
+            invert(78%) sepia(32%) saturate(668%)
+            hue-rotate(5deg) brightness(95%) contrast(89%);
+}
 .partner-card--premium h3,
 .partner-card--premium .partner-card__price,
 .partner-card--premium .partner-card__list li {
@@ -881,11 +901,11 @@ pourquoi soutenir
 .partner-footer__button {
   padding: 14px 22px;
 
-  border: 2px solid #111111;
+  border: 2px solid #C8B46E;
   border-radius: 5px;
 
-  background: #ffffff;
-  color: #111111;
+  background: #071b3a;
+  color: #C8B46E;
 
   font-family: "Poppins", sans-serif;
   font-size: 0.75rem;
@@ -898,7 +918,7 @@ pourquoi soutenir
 }
 
 .partner-footer__button:hover {
-  background: #111111;
+  background: #C8B46E;
   color: #ffffff;
 }
 
@@ -1023,35 +1043,6 @@ pourquoi soutenir
     color: #fff;
 }
 
-/* ==================================
-   SECTION TÉLÉCHARGEMENT
-================================== */
-
-.download-section{
-    width:100%;
-    background:#fff;
-    padding:50px 20px;
-}
-
-.download-container{
-    max-width:900px;
-    margin:0 auto;
-    text-align:center;
-}
-
-.download-container h2{
-    margin:0 0 22px;
-    color:#111;
-    font-family:"Poppins",sans-serif;
-    font-size:1.75rem;
-    font-weight:800;
-    line-height:1.3;
-}
-
-.download-container h2 span{
-    color:#111;
-}
-
 
 /* =========================
 Partie interview 
@@ -1146,4 +1137,908 @@ Partie interview
   font-size: 0.68rem;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+/* =========================================================
+   RESPONSIVE PAGE ACCUEIL
+   Ordinateur / Tablette / Téléphone
+========================================================= */
+
+
+/* =========================================================
+   TABLETTE
+   De 769px à 1024px
+========================================================= */
+
+@media screen and (max-width: 1024px) {
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        height: 650px;
+    }
+
+    .hero-image {
+        right: 0;
+        width: 72%;
+        height: 100%;
+        object-position: center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            to right,
+            #071732 0%,
+            rgba(7, 23, 50, 0.98) 28%,
+            rgba(7, 23, 50, 0.78) 45%,
+            rgba(7, 23, 50, 0.15) 72%,
+            rgba(7, 23, 50, 0.75) 100%
+        );
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 130px 33px 0 32px;
+    }
+
+    .hero-left {
+        width: 48%;
+    }
+
+    .hero-left h1 {
+        font-size: 55px;
+    }
+
+    .subtitle,
+    .description {
+        font-size: 16px;
+    }
+
+    .description {
+        margin-bottom: 55px;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .buttons button {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .hero-right {
+        width: 27%;
+    }
+
+    .palmares h3 {
+        font-size: 17px;
+    }
+
+    .palmares p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    /* =========================
+       HISTOIRE
+    ========================= */
+
+    .story {
+        padding: 65px 0;
+    }
+
+    .story .container {
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: 320px 1fr;
+        gap: 50px;
+    }
+
+    .story-image img {
+        height: 430px;
+    }
+
+    .story-content h2 {
+        font-size: 1.85rem;
+    }
+
+    .mountain {
+        width: 550px;
+        right: -120px;
+    }
+
+
+    /* =========================
+       BLOC TITRE PARCOURS
+    ========================= */
+
+    .container-secondary {
+        height: auto;
+        min-height: 260px;
+        padding: 65px 30px;
+    }
+
+    .story-content2 h2 {
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 1.85rem;
+    }
+
+    .story-content2 h2 span {
+        margin-left: 12px;
+    }
+
+
+    /* =========================
+       TIMELINE
+    ========================= */
+
+    .timeline-section {
+        padding: 50px 30px;
+    }
+
+    .timeline {
+        gap: 15px;
+    }
+
+    .step {
+        width: 24%;
+    }
+
+    .step h3 {
+        font-size: 14px;
+    }
+
+    .step p {
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       PROJETS SPORTIFS
+    ========================= */
+
+    .project-section {
+        padding: 45px 30px 55px;
+    }
+
+    .container-project {
+        grid-template-columns: 260px minmax(0, 1fr);
+        gap: 35px;
+        min-height: auto;
+    }
+
+    .story-project h2 {
+        font-size: 1.8rem;
+    }
+
+    .story-project p {
+        font-size: 0.9rem;
+    }
+
+    .sports-cards {
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .sport-card {
+        width: calc((100% - 30px) / 3);
+        height: 360px;
+    }
+
+    .sport-card-content {
+        left: 12px;
+        right: 12px;
+        bottom: 15px;
+    }
+
+    .sport-card-content p {
+        font-size: 0.8rem;
+    }
+
+
+    /* =========================
+       POURQUOI SOUTENIR
+    ========================= */
+
+    .support-section {
+        padding: 55px 25px;
+    }
+
+    .support-title h2 {
+        font-size: 1.85rem;
+    }
+
+    .support-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px 0;
+        margin-top: 45px;
+    }
+
+    .support-item {
+        padding: 0 35px;
+    }
+
+    .support-item:nth-child(3)::before {
+        display: none;
+    }
+
+    .support-item p {
+        font-size: 0.95rem;
+    }
+
+
+    /* =========================
+       CHIFFRES
+    ========================= */
+
+    .stats-section {
+        padding: 55px 30px;
+    }
+
+    .stats-section h2 {
+        font-size: 1.85rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 45px 25px;
+    }
+
+    .stat:nth-child(4)::before {
+        display: none;
+    }
+
+    .stat h3 {
+        font-size: 1.75rem;
+    }
+
+    .stat p {
+        font-size: 0.9rem;
+    }
+
+
+    /* =========================
+       PARTENAIRES
+    ========================= */
+
+    .partner-section {
+        padding: 55px 30px;
+    }
+
+    .partner-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .partner-card {
+        min-height: 410px;
+    }
+
+
+    /* =========================
+       MÉCÉNAT
+    ========================= */
+
+    .mecene-section {
+        padding: 60px 30px;
+    }
+
+    .mecene-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .mecene-card {
+        min-height: 260px;
+        padding: 30px 20px;
+    }
+
+    .mecene-card p {
+        font-size: 0.9rem;
+    }
+
+
+    /* =========================
+       INTERVIEW
+    ========================= */
+
+    .interview-card {
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   TÉLÉPHONE
+   Jusqu'à 768px
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* =========================
+       HERO MOBILE
+    ========================= */
+
+.hero {
+    height: auto;
+    min-height: 560px;
+    padding-top: 68px;
+}
+.hero-image {
+    top: 0;
+    right: 0;
+    bottom: auto;
+
+    width: 100%;
+    height: 100%;
+
+    object-position: 50% center;
+    transform: scale(1.08);
+}
+    .hero-overlay {
+        background:
+            linear-gradient(
+                to bottom,
+                rgba(7, 23, 50, 0.55) 0%,
+                rgba(7, 23, 50, 0.72) 35%,
+                #071732 78%,
+                #071732 100%
+            );
+    }
+
+    .hero-content {
+        min-height: 690px;
+        padding: 80px 24px 45px;
+
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-left h1 {
+        font-size: clamp(42px, 13vw, 58px);
+    }
+
+    .subtitle {
+        margin-top: 25px;
+        margin-bottom: 18px;
+        font-size: 15px;
+    }
+
+    .description {
+        max-width: 500px;
+        margin: 20px 0 35px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .gold-line {
+        width: 170px;
+    }
+
+    .buttons {
+        width: 100%;
+        margin-top: 25px;
+
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .buttons button {
+        width: 100%;
+        max-width: 330px;
+        min-height: 48px;
+    }
+
+    /* On masque le palmarès latéral dans le hero mobile */
+
+    .hero-right {
+        display: none;
+    }
+
+
+    /* =========================
+       HISTOIRE
+    ========================= */
+
+    .story {
+        padding: 50px 0;
+    }
+
+    .story .container {
+        width: 88%;
+        margin: 0 auto;
+
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .story-image {
+        width: 100%;
+    }
+
+    .story-image img {
+        width: 100%;
+        height: 430px;
+    }
+
+    .story-content h2 {
+        font-size: 1.65rem;
+        line-height: 1.3;
+    }
+
+    .story-content p {
+        font-size: 0.92rem;
+    }
+
+    .mountain {
+        width: 400px;
+        right: -160px;
+        opacity: 0.2;
+    }
+
+    .btn-secondary {
+        width: 100%;
+        max-width: 330px;
+    }
+
+
+    /* =========================
+       TITRE PARCOURS
+    ========================= */
+
+    .container-secondary {
+        min-height: auto;
+        padding: 50px 22px;
+    }
+
+    .story-content2 h2 {
+        display: block;
+        font-size: 1.6rem;
+        line-height: 1.35;
+    }
+
+    .story-content2 h2 span {
+        display: block;
+        margin-left: 0;
+    }
+
+
+    /* =========================
+       TIMELINE MOBILE
+    ========================= */
+
+    .timeline-section {
+        padding: 50px 25px;
+    }
+
+    .timeline {
+        position: relative;
+
+        flex-direction: column;
+        gap: 40px;
+
+        margin-top: 35px;
+        padding-left: 35px;
+    }
+
+    .line {
+        top: 0;
+        bottom: 0;
+        left: 12px;
+        right: auto;
+
+        width: 4px;
+        height: auto;
+
+        background: linear-gradient(
+            to bottom,
+            #a9a8a8 0%,
+            #ffffff 42%,
+            #ffebbe 70%,
+            #d8b35a 100%
+        );
+    }
+
+    .step {
+        width: 100%;
+        min-height: 80px;
+        padding-left: 15px;
+
+        text-align: left;
+    }
+
+    .dot {
+        position: absolute;
+        top: 0;
+        left: -35px;
+
+        width: 22px;
+        height: 22px;
+
+        margin: 0;
+    }
+
+    .step h3 {
+        margin-top: 0;
+        font-size: 16px;
+    }
+
+    .step p {
+        max-width: 420px;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+
+    /* =========================
+       PROJETS SPORTIFS
+    ========================= */
+
+    .project-section {
+        padding: 50px 22px;
+    }
+
+    .container-project {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .story-project h2 {
+        font-size: 1.65rem;
+    }
+
+    .story-project h3 {
+        margin: 25px 0;
+    }
+
+    .story-project p {
+        font-size: 0.92rem;
+    }
+
+    .sports-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .sport-card {
+        width: min(330px, 92%);
+        height: 420px;
+    }
+
+
+    /* =========================
+       POURQUOI SOUTENIR
+    ========================= */
+
+    .support-section {
+        padding: 50px 22px;
+    }
+
+    .support-title h2 {
+        font-size: 1.65rem;
+    }
+
+    .support-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+
+        margin-top: 40px;
+    }
+
+    .support-item {
+        padding: 30px 10px;
+    }
+
+    .support-item:not(:first-child)::before {
+        top: 0;
+        left: 15%;
+        right: 15%;
+        bottom: auto;
+
+        width: 70%;
+        height: 1px;
+    }
+
+    .support-item h3 {
+        font-size: 1.15rem;
+    }
+
+    .support-item p {
+        font-size: 0.92rem;
+    }
+
+
+    /* =========================
+       CHIFFRES
+    ========================= */
+
+    .stats-section {
+        padding: 50px 22px;
+    }
+
+    .stats-section h2 {
+        margin-bottom: 40px;
+        font-size: 1.65rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 15px;
+    }
+
+    .stat {
+        padding: 0 10px;
+    }
+
+    .stat:nth-child(odd)::before {
+        display: none;
+    }
+
+    .stat:not(:first-child)::before {
+        left: -8px;
+    }
+
+    .stat img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .stat h3 {
+        font-size: 1.6rem;
+    }
+
+    .stat p {
+        font-size: 0.82rem;
+    }
+
+
+    /* =========================
+       PARTENAIRES
+    ========================= */
+
+    .partner-section {
+        padding: 50px 22px;
+    }
+
+    .partner-heading h2 {
+        font-size: 1.65rem;
+    }
+
+    .partner-heading p {
+        font-size: 0.9rem;
+    }
+
+    .partner-cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .partner-card {
+        width: 100%;
+        max-width: 430px;
+        min-height: auto;
+        margin: 0 auto;
+        padding: 30px 25px;
+    }
+
+    .partner-card__list li {
+        font-size: 0.82rem;
+    }
+
+    .partner-footer {
+        margin-top: 35px;
+    }
+
+    .partner-footer__button {
+        width: 100%;
+        max-width: 330px;
+        text-align: center;
+    }
+
+
+    /* =========================
+       MÉCÉNAT
+    ========================= */
+
+    .mecene-section {
+        padding: 50px 22px;
+    }
+
+    .mecene-heading {
+        margin-bottom: 35px;
+    }
+
+    .mecene-heading h2 {
+        font-size: 1.65rem;
+    }
+
+    .mecene-heading p {
+        font-size: 0.9rem;
+    }
+
+    .mecene-cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .mecene-card {
+        width: 100%;
+        max-width: 430px;
+        min-height: 230px;
+        margin: 0 auto;
+    }
+
+    .mecene-footer {
+        margin-top: 35px;
+    }
+
+    .mecene-footer__button {
+        width: 100%;
+        max-width: 330px;
+        text-align: center;
+    }
+
+
+    /* =========================
+       INTERVIEW
+    ========================= */
+
+    .interview-card {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .interview-image {
+        height: 220px;
+    }
+
+}
+
+
+/* =========================================================
+   PETIT TÉLÉPHONE
+   Jusqu'à 480px
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    /* Hero */
+
+    .hero {
+        min-height: 720px;
+    }
+
+    .hero-content {
+        min-height: 545px;
+        padding: 70px 18px 35px;
+    }
+
+    .hero-left h1 {
+        font-size: 42px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .description br,
+    .subtitle br {
+        display: none;
+    }
+
+    .buttons button {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+
+    /* Histoire */
+
+    .story .container {
+        width: calc(100% - 36px);
+    }
+
+    .story-image img {
+        height: 360px;
+    }
+
+    .story-content h2 {
+        font-size: 1.45rem;
+    }
+
+
+    /* Timeline */
+
+    .timeline-section {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .dot {
+        left: -28px;
+    }
+
+
+    /* Projets */
+
+    .project-section {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .story-project h2 {
+        font-size: 1.45rem;
+    }
+
+    .sport-card {
+        width: 94%;
+        height: 380px;
+    }
+
+
+    /* Soutenir */
+
+    .support-title h2,
+    .stats-section h2,
+    .partner-heading h2,
+    .mecene-heading h2 {
+        font-size: 1.45rem;
+    }
+
+
+    /* Statistiques */
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .stat {
+        padding: 28px 10px;
+    }
+
+    .stat:not(:first-child)::before {
+        top: 0;
+        left: 20%;
+        right: 20%;
+        bottom: auto;
+
+        width: 60%;
+        height: 1px;
+    }
+
+
+    /* Cartes */
+
+    .partner-card,
+    .mecene-card {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .interview-image {
+        height: 190px;
+    }
+
 }
