@@ -272,73 +272,132 @@ HISTOIRE
 PARCOURS
 =============================*/
 
-/*--- time line ---*/
+/* --- TIMELINE --- */
 
 .timeline-section{
     background:#081b36;
-    color:white;
+    color:#fff;
     padding:60px;
 }
 
 .timeline{
     position:relative;
+
     display:flex;
     justify-content:space-between;
+    align-items:flex-start;
+
     margin-top:50px;
 }
 
+/* Ligne horizontale */
+
 .line{
     position:absolute;
-    top:10px;
+    top:11px;
     left:8%;
     right:8%;
+
     height:4px;
-    background: linear-gradient(
+
+    background:linear-gradient(
         to right,
         #a9a8a8 0%,
         #ffffff 42%,
         #ffebbe 70%,
         #d8b35a 100%
     );
+
     z-index:1;
 }
 
+/* Étapes */
+
 .step{
-    width:300px;
     position:relative;
     z-index:2;
+
+    width:300px;
+    padding:0 8px;
+
     text-align:center;
 }
+
+/* Points */
 
 .dot{
     width:26px;
     height:26px;
+    margin:0 auto;
+
     border-radius:50%;
-    background:white;
-    margin:auto;
+    background:#fff;
 }
 
-.gold .dot{
+.step.gold .dot{
     background:#d7b65f;
 }
 
-.silver .dot{
+.step.silver .dot{
     background:#a9a8a8;
 }
 
+/* Années */
 
 .step h3{
-    margin-top:15px;
+    margin:15px 0 0;
+
     font-size:16px;
-    color: #ffff
+    font-weight:700;
+    line-height:1.2;
+
+    color:#fff;
 }
 
-.step p{
+/* Résultats générés depuis Contentful */
+
+.timeline-results{
+    margin-top:7px;
+}
+
+.timeline-results p{
+    margin:5px 0;
+
     font-size:13px;
     line-height:1.4;
-    color: #ffff
+
+    color:#fff;
 }
 
+.timeline-results strong{
+    font-weight:700;
+    color:inherit;
+}
+
+/* Objectifs 2028 et 2030 en doré */
+
+.step.gold h3,
+.step.gold .timeline-results,
+.step.gold .timeline-results p,
+.step.gold .timeline-results strong{
+    color:#d7b65f;
+}
+
+/* Ancien HTML éventuel */
+
+.step > p{
+    margin:7px 0 0;
+
+    font-size:13px;
+    line-height:1.4;
+
+    color:#fff;
+}
+
+.step.gold > p,
+.step.gold > p strong{
+    color:#d7b65f;
+}
 /*---projets---*/ 
 
 .project-section {
