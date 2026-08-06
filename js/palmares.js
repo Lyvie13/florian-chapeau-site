@@ -14,35 +14,41 @@ async function chargerPalmares() {
     try {
         const response = await fetch(
             "/.netlify/functions/palmares",
-            { cache: "no-store" }
+            {
+                cache: "no-store"
+            }
         );
 
         if (!response.ok) {
-            throw new Error(`Erreur HTTP : ${response.status}`);
+            const erreur = await response.json().catch(() => ({}));
+
+            throw new Error(
+                erreur.error || `Erreur HTTP : ${response.status}`
+            );
         }
 
         const data = await response.json();
         const entrees = data.items || [];
 
         /*
-         * Résultats sportifs :
-         * on garde les cinq années les plus récentes.
+         * On conserve les cinq années de résultats
+         * les plus récentes.
          */
         const resultatsRecents = entrees
-            .filter((entree) => entree.fields?.objectif !== true)
+            .filter((entree) => entree.fields?.objectifs !== true)
             .sort(trierParAnneeDecroissante)
             .slice(0, 5);
 
         /*
-         * Objectifs :
-         * par exemple 2028 et 2030.
+         * Les objectifs, par exemple 2028 et 2030,
+         * restent toujours affichés.
          */
         const objectifs = entrees
-            .filter((entree) => entree.fields?.objectif === true);
+            .filter((entree) => entree.fields?.objectifs === true);
 
         /*
-         * On rassemble le tout puis on trie
-         * dans l'ordre chronologique.
+         * On regroupe les résultats et les objectifs,
+         * puis on trie dans l’ordre chronologique.
          */
         const palmaresAAfficher = [
             ...resultatsRecents,
@@ -59,7 +65,8 @@ async function chargerPalmares() {
 
         timeline.innerHTML = `
             <p class="timeline-message timeline-message--error">
-                Impossible de charger le palmarès pour le moment.
+                Impossible de charger le palmarès :
+                ${echapperHtml(error.message)}
             </p>
         `;
     }
@@ -78,19 +85,23 @@ function afficherPalmares(entrees, timeline) {
         return;
     }
 
-    /*
-     * La ligne horizontale de ta frise.
-     */
     const ligne = document.createElement("div");
     ligne.className = "line";
+
     timeline.appendChild(ligne);
 
     entrees.forEach((entree) => {
         const fields = entree.fields || {};
 
+        /*
+         * API identifiers Contentful :
+         * years
+         * rsultats
+         * objectifs
+         */
         const annee = fields.years || "";
-        const objectif = fields.objectif === true;
-        const resultats = fields.resultats;
+        const resultats = fields.rsultats;
+        const objectif = fields.objectifs === true;
 
         const etape = document.createElement("article");
 
@@ -116,7 +127,8 @@ function afficherPalmares(entrees, timeline) {
 
 
 /*
- * Convertit le champ Rich Text de Contentful en HTML.
+ * Convertit le champ Résultats en HTML.
+ * Compatible avec un texte simple ou un Rich Text Contentful.
  */
 function convertirResultats(resultats) {
     if (!resultats) {
@@ -124,12 +136,12 @@ function convertirResultats(resultats) {
     }
 
     /*
-     * Si le champ Contentful est un texte simple.
+     * Champ texte simple.
      */
     if (typeof resultats === "string") {
         return resultats
             .split(/\n\s*\n/)
-            .filter(Boolean)
+            .filter((bloc) => bloc.trim() !== "")
             .map((bloc) => {
                 return `
                     <p>
@@ -141,7 +153,7 @@ function convertirResultats(resultats) {
     }
 
     /*
-     * Si le champ est de type Rich Text.
+     * Champ Rich Text Contentful.
      */
     if (Array.isArray(resultats.content)) {
         return resultats.content

@@ -17,7 +17,8 @@ export default async () => {
     const url =
       `https://cdn.contentful.com/spaces/${spaceId}` +
       `/environments/master/entries` +
-      `?content_type=palmares&include=2&order=fields.annee`;
+      `?content_type=palmares&include=2`;
+
     const response = await fetch(url, {
       headers: {
         Authorization: `Bearer ${accessToken}`
@@ -26,9 +27,22 @@ export default async () => {
 
     const data = await response.json();
 
+    if (!response.ok) {
+      return Response.json(
+        {
+          error: "Erreur Contentful",
+          details: data
+        },
+        {
+          status: response.status
+        }
+      );
+    }
+
     return Response.json(data, {
-      status: response.status
+      status: 200
     });
+
   } catch (error) {
     return Response.json(
       {
