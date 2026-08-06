@@ -88,7 +88,7 @@ function afficherPalmares(entrees, timeline) {
     entrees.forEach((entree) => {
         const fields = entree.fields || {};
 
-        const annee = fields.annee || "";
+        const annee = fields.years || "";
         const objectif = fields.objectif === true;
         const resultats = fields.resultats;
 
@@ -211,16 +211,16 @@ function convertirNoeudRichText(noeud) {
 
 
 function trierParAnneeCroissante(a, b) {
-    const anneeA = Number(a.fields?.annee || 0);
-    const anneeB = Number(b.fields?.annee || 0);
+    const anneeA = Number(a.fields?.years || 0);
+    const anneeB = Number(b.fields?.years || 0);
 
     return anneeA - anneeB;
 }
 
 
 function trierParAnneeDecroissante(a, b) {
-    const anneeA = Number(a.fields?.annee || 0);
-    const anneeB = Number(b.fields?.annee || 0);
+    const anneeA = Number(a.fields?.years || 0);
+    const anneeB = Number(b.fields?.years || 0);
 
     return anneeB - anneeA;
 }
