@@ -95,7 +95,7 @@ p {
 .btn-nav{
   background: #C8B46E;
   color: white;
-  font-weight: 700;
+  font-weight: 900;
 }
 .btn-nav:hover { 
   transform: translateY(-2px);
@@ -169,7 +169,7 @@ p {
 }
 
 .contact-person{
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     font-size: 1.05rem;
     line-height: 1.5;
     color: #222;
@@ -232,7 +232,7 @@ p {
 .contact-info{
     display:flex;
     flex-direction:column;
-    gap:25px;
+    gap:15px;
     margin-top:45px;
 }
 .contact-info a{
@@ -375,7 +375,7 @@ p {
 
 .contact-form button{
 
-    padding:15px 28px;
+    padding:12px 20px;
 
     border:2px solid #C8B46E;
 
@@ -384,7 +384,7 @@ p {
     color:#fff;
 
     font-family:"Poppins",sans-serif;
-    font-size:.75rem;
+    font-size:.85rem;
     font-weight:700;
 
     border-radius:5px;

@@ -217,15 +217,15 @@ HISTOIRE
     align-items:center;
     justify-content:center;
 
-    padding:15px 15px;
+    padding:12px 15px;
 
     background:#0e2748;
     color:white;
 
     border-radius:8px;
     text-decoration:none;
-
-    font-weight:700;
+    font-size: 16px;
+    font-weight:600;
 
     transition:.3s;
 }
@@ -899,17 +899,17 @@ filter: brightness(0) saturate(100%)
 }
 
 .partner-footer__button {
-  padding: 14px 22px;
+  padding: 10px 23px;
 
   border: 2px solid #C8B46E;
-  border-radius: 5px;
+  border-radius: 8px;
 
   background: #071b3a;
   color: #C8B46E;
 
   font-family: "Poppins", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 600;
   text-decoration: none;
 
   transition:
@@ -1024,15 +1024,15 @@ filter: brightness(0) saturate(100%)
 }
 
 .mecene-footer__button {
-    padding: 14px 28px;
+    padding: 10px 20px;
     border: 2px solid #C8B46E;
     border-radius: 8px;
     background: transparent;
     color: #C8B46E;
 
     font-family: "Poppins", sans-serif;
-    font-size: .85rem;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     text-decoration: none;
 
     transition: .3s ease;

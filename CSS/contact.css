@@ -73,7 +73,6 @@ body{
     width:360px;
     height:360px;
 
-    border:1px solid rgba(200,180,110,.35);
     border-radius:50%;
 }
 
@@ -87,7 +86,7 @@ body{
 
 .contact-eyebrow,
 .contact-form-eyebrow{
-    margin:0 0 18px;
+    margin:0 0 28px;
 
     font-family:"Poppins", sans-serif;
     font-size:.75rem;
@@ -97,7 +96,7 @@ body{
 }
 
 .contact-left h1{
-    margin:0 0 28px;
+    margin:0 0 58px;
 
     font-family:"Poppins", sans-serif;
     line-height:1.05;
@@ -136,7 +135,7 @@ body{
     margin:0 0 7px;
 
     font-family:"Poppins", sans-serif;
-    font-size:.68rem;
+    font-size: 1 rem;
     letter-spacing:2px;
     font-weight:700;
     color:#c8b46e;
@@ -161,18 +160,6 @@ body{
 
 /* TÉLÉPHONE ET EMAIL */
 
-.contact-details{
-
-    margin-top:40px;
-
-    padding:25px;
-
-    background:white;
-
-    border-radius:12px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.05);
-}
 .contact-details a{
 
     display:flex;
