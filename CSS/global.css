@@ -48,7 +48,7 @@ p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.75;
-  color: #070707;
+  color: #ffffff;
 }
 
 /* ---- LAYOUT ---- */
@@ -1047,6 +1047,7 @@ p {
     p {
         font-size: 0.92rem;
         line-height: 1.65;
+        color: #FFFF
     }
 
 
@@ -1130,4 +1131,51 @@ p {
         font-size: 0.68rem;
     }
 
+}
+
+/* Réseaux sociaux */
+
+.contact-social{
+    margin-top:10px;
+}
+
+.contact-social__title{
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#0b1d3a;
+    margin-bottom:16px;
+}
+
+.contact-social__links{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.contact-social__links a{
+    width:46px;
+    height:46px;
+    border:1.5px solid #D7BA63;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.25s ease;
+}
+
+.contact-social__links a:hover{
+    background:#D7BA63;
+    transform:translateY(-2px);
+}
+
+.contact-social__links img{
+    width:22px;
+    height:22px;
+    transition:.25s ease;
+}
+
+.contact-social__links a:hover img{
+    filter:brightness(0) saturate(100%) invert(12%) sepia(33%) saturate(1264%) hue-rotate(190deg) brightness(93%) contrast(96%);
 }

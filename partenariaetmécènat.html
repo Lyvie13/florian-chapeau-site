@@ -316,6 +316,7 @@
             </div>
 
         </div>
+<div class="offers-mobile-cards" id="offers-mobile-cards"></div>
 
         <!-- COLONNE DROITE -->
         <aside class="patron-card">
@@ -387,7 +388,6 @@
         </aside>
 
     </div>
-
 </section>
 
 <!-- ==================================
@@ -415,7 +415,7 @@
     <input
         type="hidden"
         name="access_key"
-        value="70930b4b-237d-4e82-a121-1a9e58332a54"
+        value="61b1924a-8915-4f84-bd0e-54660377c014"
     >
 
     <input
@@ -428,8 +428,7 @@
         type="hidden"
         name="from_name"
         value="Site Florian Chapeau"
-    >            
-
+    >
                 <div class="support-form__grid">
 
                     <div class="support-field">
@@ -730,7 +729,36 @@
                   <img src="icons/line-md--email.svg" alt="">
                   contact@florianchapeau.fr
                 </a>
-             
+                          <div class="contact-social">
+
+    <p class="contact-social__title">
+        Suivre Florian
+    </p>
+
+    <div class="contact-social__links">
+
+        <a
+            href="https://www.instagram.com/chapeau_florian/?utm_source=ig_web_button_share_sheet"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+        >
+            <img src="icons/mdi--instagram.svg" alt="Instagram">
+        </a>
+
+        <a
+            href="https://www.facebook.com/share/1DnhgGfeiX/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+        >
+            <img src="icons/mdi--facebook.svg" alt="Facebook">
+        </a>
+
+    </div>
+
+</div>
+
 
             </div>
 
@@ -751,7 +779,7 @@
     <input
         type="hidden"
         name="access_key"
-        value="70930b4b-237d-4e82-a121-1a9e58332a54"
+        value="61b1924a-8915-4f84-bd0e-54660377c014"
     >
 
     <input
@@ -764,7 +792,7 @@
         type="hidden"
         name="from_name"
         value="Site Florian Chapeau"
-    >            
+    >
 
             <div class="contact-row">
 
@@ -968,7 +996,45 @@ form.addEventListener("submit", async (e) => {
 
     button.disabled = false;
     button.textContent = "ENVOYER MA DEMANDE";
+        try {
 
+    const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+            method: "POST",
+            body: data
+        }
+    );
+
+    const result = await response.json();
+
+    if (result.success) {
+
+        message.textContent = "✓ Votre message a bien été envoyé.";
+        message.className = "form-message success";
+
+        form.reset();
+
+    } else {
+
+        throw new Error(result.message);
+
+    }
+
+} catch (error) {
+
+    message.textContent =
+        "Une erreur est survenue. Merci de réessayer.";
+
+    message.className = "form-message error";
+
+} finally {
+
+    button.disabled = false;
+    button.textContent = "ENVOYER MA DEMANDE";
+
+
+}
 });
 </script>
 <script>
@@ -993,5 +1059,96 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 <script src="js/dossier-sponsoring.js"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    const table = document.querySelector(".offers-table");
+    const mobileContainer = document.getElementById("offers-mobile-cards");
+
+    if (!table || !mobileContainer) return;
+
+    const headers = [...table.querySelectorAll("thead th")].slice(1);
+    const rows = [...table.querySelectorAll("tbody tr")];
+
+    headers.forEach((header, columnIndex) => {
+
+        const title =
+            header.querySelector("strong")?.textContent.trim() || "";
+
+        const price =
+            header.querySelector("span")?.textContent.trim() || "";
+
+        const card = document.createElement("article");
+
+        card.classList.add("offer-mobile-card");
+
+        if (header.classList.contains("offer-head--bronze")) {
+            card.classList.add("offer-mobile-card--bronze");
+        }
+
+        if (header.classList.contains("offer-head--silver")) {
+            card.classList.add("offer-mobile-card--silver");
+        }
+
+        if (header.classList.contains("offer-head--gold")) {
+            card.classList.add("offer-mobile-card--gold");
+        }
+
+        if (header.classList.contains("offer-head--premium")) {
+            card.classList.add("offer-mobile-card--premium");
+        }
+
+        let avantages = "";
+
+        rows.forEach((row) => {
+
+            const cells = row.querySelectorAll("td");
+
+            const label = cells[0]?.textContent.trim();
+            const value = cells[columnIndex + 1]?.textContent.trim();
+
+            if (
+                !label ||
+                !value ||
+                value === "—" ||
+                value === "-"
+            ) {
+                return;
+            }
+
+            avantages += `
+                <li>
+                    <span class="offer-mobile-check">✓</span>
+                    <span>${label}</span>
+                </li>
+            `;
+        });
+
+        card.innerHTML = `
+            <div class="offer-mobile-card__head">
+
+                <h3>${title}</h3>
+
+                <p>${price}</p>
+
+            </div>
+
+            <ul class="offer-mobile-card__list">
+                ${avantages}
+            </ul>
+
+            <button
+                class="offer-mobile-card__button"
+                type="button"
+                onclick="window.location.href='Contact.html'"
+            >
+                NOUS CONTACTER
+            </button>
+        `;
+
+        mobileContainer.appendChild(card);
+    });
+
+});
+</script>
 </body>

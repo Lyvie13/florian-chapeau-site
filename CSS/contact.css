@@ -381,3 +381,431 @@ padding:80px 70px;
 .contact-footer a:hover{
     color:#c8b46e;
 }
+
+/* =========================================================
+   CORRECTIONS COULEURS + RESPONSIVE PAGE CONTACT
+========================================================= */
+
+
+/* =========================================================
+   CORRECTIONS DESKTOP
+========================================================= */
+
+/* Titre gauche sur fond sombre */
+
+
+.contact-left h1 span{
+    color:#c8b46e;
+}
+
+
+/* Coordonnées dans la partie gauche */
+
+
+.contact-details a:hover{
+    color:#c8b46e;
+}
+
+
+/* Partie droite sur fond clair */
+
+
+.form-field label{
+    color:#071732;
+}
+
+.contact-consent label{
+    color:#555;
+}
+
+.contact-consent a{
+    color:#071732;
+}
+
+
+/* =========================================================
+   TABLETTE / PETIT ORDINATEUR
+   jusqu'à 1100px
+========================================================= */
+
+@media screen and (max-width:1100px){
+
+    .contact-section{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-left{
+        padding:80px 6% 55px;
+    }
+
+    .contact-right{
+        padding:80px 40px 55px;
+    }
+
+    .contact-left-content{
+        max-width:500px;
+    }
+
+    .contact-left h1{
+        margin-bottom:40px;
+        font-size:clamp(2rem, 4vw, 3rem);
+    }
+
+    .contact-description{
+        font-size:.88rem;
+    }
+
+    .contact-form-wrapper h2{
+        font-size:2.2rem;
+    }
+
+    .contact-form-intro{
+        margin-bottom:28px;
+        font-size:.85rem;
+    }
+
+    .contact-row{
+        gap:14px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLETTE PORTRAIT
+   jusqu'à 850px
+========================================================= */
+
+@media screen and (max-width:850px){
+
+    /*
+       On passe à une seule colonne.
+       Bloc présentation puis formulaire.
+    */
+
+    .contact-section{
+        display:block;
+    }
+
+    .contact-left,
+    .contact-right{
+        min-height:auto;
+    }
+
+
+    /* =========================
+       BLOC GAUCHE
+    ========================= */
+
+    .contact-left{
+        padding:105px 45px 55px;
+
+        background:
+            linear-gradient(
+                rgba(7,23,50,.86),
+                rgba(7,23,50,.96)
+            ),
+            url(
+                "https://res.cloudinary.com/dhmehfgjo/image/upload/v1783519638/Alpes.jpg"
+            );
+
+        background-size:cover;
+        background-position:center;
+    }
+
+    .contact-left-content{
+        max-width:650px;
+        margin:0 auto;
+    }
+
+    .contact-left h1{
+        margin-bottom:30px;
+
+        font-size:2.2rem;
+        line-height:1.1;
+    }
+
+    .contact-left h1 span{
+        margin-top:7px;
+    }
+
+    .contact-description{
+        max-width:620px;
+
+        font-size:.88rem;
+        line-height:1.65;
+    }
+
+    .contact-person{
+        margin-top:30px;
+        padding-top:25px;
+    }
+
+    .contact-person h2{
+        font-size:1.35rem;
+    }
+
+    .contact-details{
+        margin-top:22px;
+    }
+
+    .contact-details a{
+        font-size:.9rem;
+    }
+
+
+    /* =========================
+       FORMULAIRE
+    ========================= */
+
+    .contact-right{
+        padding:55px 40px;
+
+        background:#f7f7f5;
+    }
+
+    .contact-form-wrapper{
+        max-width:650px;
+    }
+
+    .contact-form-wrapper h2{
+        font-size:2rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   jusqu'à 600px
+========================================================= */
+
+@media screen and (max-width:600px){
+
+    /* =========================
+       BLOC GAUCHE
+    ========================= */
+
+    .contact-left{
+        padding:95px 20px 45px;
+        background-position:center;
+    }
+
+    .contact-left h1{
+        margin-bottom:28px;
+
+        font-size:1.85rem;
+        line-height:1.12;
+    }
+
+    .contact-left h1 span{
+        margin-top:8px;
+    }
+
+    .contact-description{
+        margin-bottom:15px;
+
+        font-size:.82rem;
+        line-height:1.65;
+    }
+
+    .contact-person{
+        margin-top:28px;
+        padding-top:22px;
+    }
+
+    .contact-person-label{
+        font-size:.7rem;
+    }
+
+    .contact-person h2{
+        font-size:1.2rem;
+    }
+
+    .contact-person p:last-child{
+        font-size:.78rem;
+    }
+
+    .contact-details{
+        margin-top:20px;
+    }
+
+    .contact-details a{
+        gap:10px;
+        margin-bottom:12px;
+
+        font-size:.8rem;
+
+        overflow-wrap:anywhere;
+    }
+
+    .contact-icon{
+        width:20px;
+    }
+
+
+    /* =========================
+       RÉSEAUX
+    ========================= */
+
+    .contact-social{
+        margin-top:25px;
+    }
+
+    .contact-social__title{
+        font-size:.75rem;
+    }
+
+    .contact-social__links{
+        gap:12px;
+    }
+
+
+    /* =========================
+       FORMULAIRE
+    ========================= */
+
+    .contact-right{
+        padding:45px 18px;
+    }
+
+    .contact-form-wrapper{
+        width:100%;
+    }
+
+    .contact-form-eyebrow{
+        margin-bottom:15px;
+
+        font-size:.68rem;
+        letter-spacing:2px;
+    }
+
+    .contact-form-wrapper h2{
+        font-size:1.7rem;
+    }
+
+    .contact-form-intro{
+        margin-bottom:25px;
+
+        font-size:.82rem;
+        line-height:1.55;
+    }
+
+
+    /*
+       Nom / email
+       téléphone / objet
+       passent en une seule colonne
+    */
+
+    .contact-row{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .contact-form{
+        gap:17px;
+    }
+
+    .form-field{
+        gap:6px;
+    }
+
+    .form-field label{
+        font-size:.69rem;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea{
+        min-height:48px;
+
+        padding:13px 14px;
+
+        font-size:.78rem;
+        border-radius:6px;
+    }
+
+    .form-field textarea{
+        min-height:135px;
+    }
+
+
+    /* =========================
+       CONSENTEMENT
+    ========================= */
+
+    .contact-consent label{
+        align-items:flex-start;
+
+        gap:9px;
+
+        font-size:.7rem;
+        line-height:1.5;
+    }
+
+    .contact-consent input[type="checkbox"]{
+        width:17px;
+        height:17px;
+    }
+
+
+    /* =========================
+       BOUTON
+    ========================= */
+
+    .contact-form button{
+        width:100%;
+
+        min-height:50px;
+
+        align-self:stretch;
+
+        padding:14px 18px;
+
+        border-radius:6px;
+
+        font-size:.72rem;
+    }
+
+}
+
+
+/* =========================================================
+   PETIT MOBILE
+   jusqu'à 400px
+========================================================= */
+
+@media screen and (max-width:400px){
+
+    .contact-left{
+        padding:90px 16px 40px;
+    }
+
+    .contact-left h1{
+        font-size:1.65rem;
+    }
+
+    .contact-description{
+        font-size:.78rem;
+    }
+
+    .contact-right{
+        padding:40px 14px;
+    }
+
+    .contact-form-wrapper h2{
+        font-size:1.55rem;
+    }
+
+    .contact-form-intro{
+        font-size:.78rem;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea{
+        font-size:.75rem;
+    }
+
+}

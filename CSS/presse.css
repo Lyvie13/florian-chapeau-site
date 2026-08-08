@@ -56,7 +56,7 @@ background: linear-gradient(
     margin: auto;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 80px 40px 0;
 }
 
@@ -564,4 +564,571 @@ background: linear-gradient(
   height: 42px;
 
   object-fit: contain;
+}
+
+/* =========================================================
+   RESPONSIVE COMPLET - PAGE PRESSE
+========================================================= */
+
+
+/* =========================================================
+   PETIT ORDINATEUR / TABLETTE PAYSAGE
+   jusqu'à 1100px
+========================================================= */
+
+@media screen and (max-width:1100px){
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+        height:620px;
+    }
+
+    .hero-image{
+        right:0;
+        width:72%;
+        height:100%;
+        object-position:60% center;
+    }
+
+    .hero-overlay{
+        background:linear-gradient(
+            to right,
+            #071732 0%,
+            rgba(7,23,50,.98) 30%,
+            rgba(7,23,50,.75) 48%,
+            rgba(7,23,50,.15) 73%,
+            rgba(7,23,50,.65) 100%
+        );
+    }
+
+    .hero-content{
+        max-width:100%;
+        padding:70px 35px 0;
+    }
+
+    .hero-left{
+        width:52%;
+    }
+
+    .hero-left h1{
+        font-size:52px;
+        line-height:1.05;
+    }
+
+    .subtitle,
+    .description{
+        font-size:15px;
+    }
+
+    .subtitle{
+        margin-top:28px;
+        margin-bottom:22px;
+    }
+
+    .description{
+        margin-top:22px;
+    }
+
+    .press-contact{
+        margin-top:28px;
+    }
+
+    .press-contact h3{
+        font-size:1.3rem;
+    }
+
+    .press-contact a{
+        font-size:.9rem;
+    }
+
+
+    /* =========================
+       ARTICLES / INTERVIEWS
+    ========================= */
+
+    .presse{
+        width:calc(100% - 50px);
+        margin:75px auto;
+    }
+
+    .section-header h2{
+        font-size:28px;
+    }
+
+    #articles-list,
+    #interviews-list,
+    .presse-grid{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+        gap:25px;
+    }
+
+    .press-card__title{
+        font-size:1.2rem;
+    }
+
+    .press-card__description{
+        font-size:.9rem;
+    }
+
+
+    /* =========================
+       DOSSIER + MÉDIAS
+    ========================= */
+
+    .press-bottom-container{
+        width:min(900px, calc(100% - 40px));
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLETTE PORTRAIT / MOBILE
+   jusqu'à 768px
+========================================================= */
+
+@media screen and (max-width:768px){
+
+    /* =========================
+       HERO MOBILE
+    ========================= */
+
+    .hero{
+        height:auto;
+        min-height:690px;
+        padding-top:68px;
+    }
+
+    .hero-image{
+        top:0;
+        right:0;
+        bottom:auto;
+
+        width:100%;
+        height:100%;
+
+        object-position:45% center;
+    }
+
+    .hero-overlay{
+        background:linear-gradient(
+            to bottom,
+            rgba(7,23,50,.35) 0%,
+            rgba(7,23,50,.55) 35%,
+            rgba(7,23,50,.92) 72%,
+            #071732 100%
+        );
+    }
+
+    .hero-content{
+        min-height:622px;
+
+        padding:45px 22px 38px;
+
+        flex-direction:column;
+        justify-content:center;
+        align-items:flex-start;
+    }
+
+    .hero-left{
+        width:100%;
+        max-width:500px;
+    }
+
+    .hero-left h1{
+        font-size:clamp(40px, 12vw, 52px);
+        line-height:1.02;
+    }
+
+    .subtitle{
+        margin:22px 0 15px;
+
+        font-size:14px;
+        line-height:1.55;
+    }
+
+    .description{
+        margin:18px 0 0;
+
+        font-size:13px;
+        line-height:1.6;
+    }
+
+    .subtitle br,
+    .description br{
+        display:none;
+    }
+
+    .gold-line{
+        width:140px;
+        margin-bottom:15px;
+    }
+
+
+    /* =========================
+       CONTACT PRESSE
+    ========================= */
+
+    .press-contact{
+        margin-top:28px;
+        gap:5px;
+    }
+
+    .press-contact__label{
+        font-size:.68rem;
+    }
+
+    .press-contact h3{
+        font-size:1.25rem;
+    }
+
+    .press-contact__role{
+        font-size:.82rem;
+    }
+
+    .press-contact a{
+        font-size:.85rem;
+        overflow-wrap:anywhere;
+    }
+
+
+    /* =========================
+       SECTIONS PRESSE
+    ========================= */
+
+    .presse{
+        width:calc(100% - 36px);
+        margin:55px auto;
+    }
+
+    .section-header{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:25px;
+
+        margin-bottom:30px;
+    }
+
+    .section-header h2{
+        font-size:1.55rem;
+        line-height:1.2;
+    }
+
+    .section-header h2::after{
+        width:55px;
+        height:3px;
+    }
+
+    .section-header a{
+        font-size:.72rem;
+        line-height:1.4;
+    }
+
+
+    /* =========================
+       CARTES CONTENTFUL
+    ========================= */
+
+    #articles-list,
+    #interviews-list,
+    .presse-grid{
+        grid-template-columns:1fr;
+        gap:24px;
+    }
+
+    .press-card{
+        width:100%;
+        max-width:520px;
+        margin:0 auto;
+
+        border-radius:14px;
+    }
+
+    .press-card:hover{
+        transform:none;
+    }
+
+    .press-card__image-wrapper{
+        aspect-ratio:16 / 9;
+    }
+
+    .press-card__content{
+        padding:20px;
+    }
+
+    .press-card__date{
+        margin-bottom:10px;
+
+        font-size:.7rem;
+    }
+
+    .press-card__title{
+        margin-bottom:12px;
+
+        font-size:1.18rem;
+        line-height:1.35;
+    }
+
+    .press-card__description{
+        margin-bottom:20px;
+
+        font-size:.85rem;
+        line-height:1.6;
+    }
+
+    .press-card__link{
+        font-size:.74rem;
+    }
+
+
+    /* Anciennes cartes éventuelles */
+
+    .presse-card{
+        width:100%;
+        max-width:520px;
+        margin:0 auto;
+    }
+
+    .card-image{
+        height:220px;
+    }
+
+    .card-content{
+        padding:20px;
+    }
+
+    .card-content h3{
+        font-size:1.2rem;
+    }
+
+    .card-content p{
+        font-size:.86rem;
+    }
+
+
+    /* =========================
+       DOSSIER PRESSE / MÉDIAS
+    ========================= */
+
+    .press-bottom-container{
+        width:100%;
+
+        grid-template-columns:1fr;
+
+        min-height:auto;
+    }
+
+    .press-download-block,
+    .press-trust-block{
+        padding:35px 22px;
+    }
+
+    .press-download-block{
+        border-right:none;
+        border-bottom:1px solid #ddd;
+    }
+
+    .press-download-block h2,
+    .press-trust-block h2{
+        font-size:1.25rem;
+    }
+
+    .press-download-button{
+        width:100%;
+        max-width:330px;
+
+        padding:13px 18px;
+
+        font-size:.78rem;
+        text-align:center;
+    }
+
+    .press-trust-logos{
+        gap:22px;
+    }
+
+    .press-trust-logos img{
+        max-width:90px;
+        height:38px;
+    }
+
+}
+
+
+
+/* =========================================================
+   PETIT MOBILE
+   jusqu'à 480px
+========================================================= */
+
+@media screen and (max-width:480px){
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+        min-height:640px;
+    }
+
+    .hero-content{
+        min-height:576px;
+
+        padding:35px 18px 30px;
+    }
+
+    .hero-left h1{
+        font-size:38px;
+    }
+
+    .subtitle{
+        font-size:13px;
+    }
+
+    .description{
+        font-size:12.5px;
+    }
+
+    .press-contact{
+        margin-top:24px;
+    }
+
+    .press-contact h3{
+        font-size:1.12rem;
+    }
+
+    .press-contact__role{
+        font-size:.76rem;
+    }
+
+    .press-contact a{
+        font-size:.8rem;
+    }
+
+
+    /* =========================
+       ARTICLES
+    ========================= */
+
+    .presse{
+        width:calc(100% - 28px);
+        margin:45px auto;
+    }
+
+    .section-header{
+        gap:22px;
+    }
+
+    .section-header h2{
+        font-size:1.35rem;
+    }
+
+    .section-header a{
+        font-size:.67rem;
+    }
+
+
+    /* =========================
+       CARTES CONTENTFUL MOBILE
+    ========================= */
+
+    #articles-list,
+    #interviews-list{
+        gap:20px;
+    }
+
+    .press-card{
+        border-radius:12px;
+    }
+
+    .press-card__image-wrapper{
+        aspect-ratio:4 / 3;
+    }
+
+    .press-card__content{
+        padding:17px;
+    }
+
+    .press-card__date{
+        font-size:.66rem;
+    }
+
+    .press-card__title{
+        font-size:1.05rem;
+    }
+
+    .press-card__description{
+        font-size:.8rem;
+        line-height:1.55;
+    }
+
+    .press-card__link{
+        font-size:.7rem;
+    }
+
+
+    /* =========================
+       BAS DE PAGE PRESSE
+    ========================= */
+
+    .press-download-block,
+    .press-trust-block{
+        padding:30px 18px;
+    }
+
+    .press-download-block h2,
+    .press-trust-block h2{
+        font-size:1.15rem;
+    }
+
+    .press-bottom-line{
+        margin:10px 0 20px;
+    }
+
+    .press-trust-logos{
+        justify-content:flex-start;
+        gap:18px;
+    }
+
+    .press-trust-logos img{
+        max-width:80px;
+        height:34px;
+    }
+
+}
+
+
+
+/* =========================================================
+   TRÈS PETIT MOBILE
+   jusqu'à 360px
+========================================================= */
+
+@media screen and (max-width:360px){
+
+    .hero-left h1{
+        font-size:34px;
+    }
+
+    .hero-content{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .presse{
+        width:calc(100% - 24px);
+    }
+
+    .press-card__content{
+        padding:15px;
+    }
+
+    .press-card__title{
+        font-size:1rem;
+    }
+
 }
