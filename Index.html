@@ -88,6 +88,7 @@
 
             <p class="subtitle">
                 Athlète paralympique
+                <br class="mobile-break">
                 <br> Paracyclisme - Para ski de fond - Para-biathlon
             </p>
 
@@ -399,12 +400,13 @@
             <p>Parcourus<br>chaque semaine</p>
         </article>
 
-        <article class="stat">
-<img src="icons/proicons--graph.svg" alt="Budget annuel">           
-       <h3>50 000 €</h3>
-            <p>Budget annuel<br>jusqu'en 2028</p>
-        </article>
+<article class="stat">
+    <img src="icons/proicons--graph.svg" alt="Budget annuel">
 
+    <h3 id="budget-montant"></h3>
+
+    <p id="budget-libelle"></p>
+</article>
     </div>
 
 </section>
@@ -516,7 +518,8 @@
 <img src="icons/icon-park-outline--people.svg" alt="Inclusion">
 </div>
       <div>
-        Valorisez votre politique RSE
+        Valorisez votre politique RSE :
+        <br>inclusion, égalité, handicap...
     </article>
 
         <article class="mecene-card">
@@ -534,7 +537,7 @@ Votre soutien permet de financer le matériel, les déplacements, la préparatio
 </div>
       <div>
         Votre don ouvre droit à une réduction fiscale 
-        selon la réglementation en vigueur.*
+        selon la réglementation en vigueur.
       </div>
 
     </article>
@@ -586,7 +589,9 @@ Votre soutien permet de financer le matériel, les déplacements, la préparatio
             </h2>
 
             <p>
-                Vous souhaitez devenir partenaire ou mécène ou simplement obtenir davantage d'informations ? N'hésitez pas à prendre contact.
+                Vous souhaitez devenir partenaire ou mécène, 
+                <br>ou simplement obtenir davantage d'informations ? 
+                <br>N'hésitez pas à prendre contact.
                 
                 
             </p>
@@ -596,6 +601,10 @@ Votre soutien permet de financer le matériel, les déplacements, la préparatio
               <div class="contact-person">
                 <strong>Caroline SERRE</strong>
               </div>
+                  <p class="press-contact__role">
+        Responsable sponsoring & partenariats
+    </p>
+
 
                 <a href="tel:+33629927313">
                   <img src="icons/line-md--phone.svg" alt="">
@@ -931,4 +940,5 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 <script src="js/palmares.js"></script>
 <script src="js/dossier-sponsoring.js"></script>
+<script src="js/budget.js"></script>
 </body>

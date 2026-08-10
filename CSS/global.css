@@ -130,6 +130,9 @@ p {
   font-style: italic;
 
 }
+.logo-text{
+    cursor: pointer;
+}
 
 /* ---- NAVIGATION ---- */
 .nav-links {
@@ -205,7 +208,7 @@ p {
 
 .contact-left h2{
 
-    margin:0;
+    margin-bottom: 20px;
 
     color:#111;
 
@@ -221,7 +224,7 @@ p {
 
 .contact-left p{
 
-    margin:25px 0;
+    margin:0px 0 20px 0px;
 
     color:#333;
 

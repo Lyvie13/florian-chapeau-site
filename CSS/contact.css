@@ -150,11 +150,11 @@ body{
 }
 
 .contact-person p:last-child{
-    margin:0;
+    margin-bottom:30px;
 
     font-family:"Poppins", sans-serif;
     font-size:.85rem;
-    color:rgba(255,255,255,.72);
+    color:rgba(0, 0, 0, 0.72);
 }
 
 

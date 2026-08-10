@@ -2246,3 +2246,19 @@ Partie interview
     }
 
 }
+.mobile-break{
+    display:none;
+}
+
+@media screen and (max-width:768px){
+
+    .subtitle .mobile-break{
+        display:block !important;
+    }
+
+}
+@media (max-width: 768px) {
+    .timeline-item {
+        margin-bottom: 20px;
+    }
+}
