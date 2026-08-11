@@ -5,7 +5,9 @@ async function chargerBudget() {
     const montant = document.getElementById("budget-montant");
     const libelle = document.getElementById("budget-libelle");
 
-    if (!montant || !libelle) return;
+    if (!montant || !libelle) {
+        return;
+    }
 
     try {
 
@@ -25,13 +27,15 @@ async function chargerBudget() {
         const entree = data.items?.[0];
 
         if (!entree) {
-            throw new Error("Aucune entrée budget trouvée dans Contentful");
+            throw new Error(
+                "Aucune entrée budget trouvée dans Contentful"
+            );
         }
 
         const fields = entree.fields || {};
 
-        montant.textContent = fields.montant || "";
-        libelle.textContent = fields.libelle || "";
+        montant.textContent = fields.montant || "50 000 €";
+        libelle.textContent = fields.libelle || "Budget annuel";
 
     } catch (error) {
 
