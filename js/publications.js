@@ -182,7 +182,24 @@ if (interviewsContainer) {
         }
       </div>
     `;
+if (lien) {
+  article.classList.add("press-card--clickable");
 
+  article.addEventListener("click", (event) => {
+
+    // Si on clique directement sur le lien,
+    // on laisse le <a> fonctionner normalement
+    if (event.target.closest("a")) {
+      return;
+    }
+
+    window.open(
+      lien,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  });
+}
     return article;
   }
 

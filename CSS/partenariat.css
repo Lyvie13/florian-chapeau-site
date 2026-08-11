@@ -1466,6 +1466,7 @@ pourquoi soutenir
 
     .patron-intro{
         font-size:.8rem;
+        text-align:center
     }
 
     .patron-benefit img{
@@ -1790,6 +1791,7 @@ pourquoi soutenir
 .tax-box p,
 .tax-box strong{
     color:#111;
+    text-align:center;
 }
 
 .patron-card > h2{
@@ -1798,4 +1800,37 @@ pourquoi soutenir
 
 .patron-card > h2 span{
     color:#c8b46e;
+}
+/* Caché sur desktop */
+.offers-mobile-contact {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .offers-mobile-contact {
+        display: flex;
+        justify-content: center;
+        margin: 5px 20px 25px;
+    }
+
+    .offers-mobile-contact a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 52px;
+        padding: 14px 30px;
+
+        background: #D7BA63;
+        color: #ffffff;
+
+        font-family: "Poppins", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-decoration: none;
+
+        border-radius: 6px;
+        cursor: pointer;
+    }
 }

@@ -1062,7 +1062,7 @@ p {
     }
 
     .contact-left h2 {
-        font-size: 1.45rem;
+        font-size: 0.95rem;
     }
 
     .contact-info {
@@ -1143,7 +1143,7 @@ p {
 }
 
 .contact-social__title{
-    font-size:13px;
+    font-size:16px;
     font-weight:700;
     text-transform:uppercase;
     letter-spacing:2px;

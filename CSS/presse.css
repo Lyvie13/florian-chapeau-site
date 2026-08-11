@@ -1132,3 +1132,6 @@ background: linear-gradient(
     }
 
 }
+.press-card--clickable {
+    cursor: pointer;
+}

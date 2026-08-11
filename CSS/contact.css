@@ -615,7 +615,7 @@ padding:80px 70px;
     }
 
     .contact-person-label{
-        font-size:.7rem;
+        font-size:1rem;
     }
 
     .contact-person h2{
@@ -623,7 +623,7 @@ padding:80px 70px;
     }
 
     .contact-person p:last-child{
-        font-size:.78rem;
+        font-size:.8rem;
     }
 
     .contact-details{
@@ -808,4 +808,59 @@ padding:80px 70px;
         font-size:.75rem;
     }
 
+}
+
+@media screen and (max-width: 768px){
+
+    .contact-section{
+        padding-top: 44px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .contact-person {
+        margin-top: 22px;
+        padding-top: 18px;
+    }
+
+    .contact-person-label {
+        margin-bottom: 8px;
+    }
+
+    .contact-person h2 {
+        margin-bottom: 6px;
+        font-size: 1.25rem;
+    }
+
+    .contact-person p:last-child {
+        margin-bottom: 18px;
+    }
+
+    .contact-details {
+        margin-top: 14px;
+    }
+
+    .contact-details a {
+        margin-bottom: 10px;
+    }
+
+    .contact-social {
+        margin-top: 18px;
+    }
+
+    .contact-social__title {
+        margin-bottom: 12px;
+    }
+
+    .contact-social__links a {
+        width: 42px;
+        height: 42px;
+    }
+
+    .contact-social__links img {
+        width: 20px;
+        height: 20px;
+    }
 }

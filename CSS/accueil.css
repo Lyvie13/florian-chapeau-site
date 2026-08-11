@@ -2116,7 +2116,9 @@ Partie interview
 
         width:100%;
     }
-
+.partner-card__button{
+    display:none;
+}
     .sport-card{
         position:relative;
 
@@ -2261,4 +2263,16 @@ Partie interview
     .timeline-item {
         margin-bottom: 20px;
     }
+}
+@media screen and (max-width: 768px) {
+
+    .support-item:nth-child(2)::after {
+        content: "";
+        display: block;
+        width: 70%;
+        height: 1px;
+        background: #d9d9d9;
+        margin: 35px auto 0;
+    }
+
 }
