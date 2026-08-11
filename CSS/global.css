@@ -10,6 +10,22 @@
 }  
 
 html { scroll-behavior: smooth; }
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
