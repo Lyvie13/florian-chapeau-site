@@ -1198,3 +1198,15 @@ p {
 .contact-social__links a:hover img{
     filter:brightness(0) saturate(100%) invert(12%) sepia(33%) saturate(1264%) hue-rotate(190deg) brightness(93%) contrast(96%);
 }
+.offer-mobile-card__head a,
+.offer-mobile-card__head a:visited,
+.offer-mobile-card__head a:active {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+.offer-mobile-card__head p,
+.offer-mobile-card__head p * {
+    color: inherit !important;
+    text-decoration: none !important;
+    -webkit-text-fill-color: currentColor;
+}
