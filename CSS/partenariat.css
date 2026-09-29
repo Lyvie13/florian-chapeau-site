@@ -736,10 +736,69 @@ pourquoi soutenir
 .supporters-logos{
     margin-top:30px;
 
+    width:100%;
+}
+
+.supporters-logos--static,
+.supporters-logos:not(.supporters-logos--carousel){
+
     display:grid;
     grid-template-columns:repeat(5, minmax(0, 1fr));
     align-items:center;
     gap:45px;
+}
+
+.supporters-logos--carousel{
+    overflow:hidden;
+
+    -webkit-mask-image:linear-gradient(
+        to right,
+        transparent,
+        #000 6%,
+        #000 94%,
+        transparent
+    );
+    mask-image:linear-gradient(
+        to right,
+        transparent,
+        #000 6%,
+        #000 94%,
+        transparent
+    );
+}
+
+.supporters-track{
+    --supporters-duration:24s;
+
+    width:max-content;
+    display:flex;
+
+    animation:supporters-scroll var(--supporters-duration) linear infinite;
+    will-change:transform;
+}
+
+.supporters-set{
+    flex:none;
+    display:flex;
+    align-items:center;
+    gap:45px;
+    padding-right:45px;
+}
+
+.supporters-logos--carousel:hover .supporters-track,
+.supporters-logos--carousel:focus-within .supporters-track{
+    animation-play-state:paused;
+}
+
+.supporters-logos--carousel .supporter-logo{
+    width:clamp(150px, 18vw, 220px);
+    flex:none;
+}
+
+@keyframes supporters-scroll{
+    to{
+        transform:translateX(-50%);
+    }
 }
 
 .supporter-logo{
@@ -764,6 +823,22 @@ pourquoi soutenir
 
 .supporter-logo:hover img{
     transform:scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce){
+    .supporters-logos--carousel{
+        overflow-x:auto;
+        mask-image:none;
+        -webkit-mask-image:none;
+    }
+
+    .supporters-track{
+        animation:none;
+    }
+
+    .supporters-set[aria-hidden="true"]{
+        display:none;
+    }
 }
 
 
